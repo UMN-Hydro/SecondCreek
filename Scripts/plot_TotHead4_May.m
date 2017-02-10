@@ -89,29 +89,25 @@ jj = jj+1; fil{ii,jj} = [dir0, 'PZ-Out_161005_Calib20160531_0915_results.mat'];
 % 
 % 
 % 
-% 
+
 % % 
 % 
-% ii = ii+1; jj = 0; sitename{ii} = 'PZCC'; sitetype{ii} = 'P';
-% %jj = jj+1; fil{ii,jj} =
-% %'C:\Users\Amanda\Desktop\Research\Scripts\diver\PZ-Out_150625_Calib20150625_1620_results.mat';
-% %don't need - creates a double line b/c data is on 150709
-% jj = jj+1; fil{ii,jj} = [dir0, 'PZ-CC_161005_Calib20160531_0915_results.mat'];
-% %jj = jj+1; fil{ii,jj} = 'C:\Users\Amanda\Desktop\Research\Scripts\diver\PZ-Out_150812_Calib20150812_1910_results.mat';
-% % 
-% ii = ii+1; jj = 0; sitename{ii} = 'PZCE'; sitetype{ii} = 'P';
-% %jj = jj+1; fil{ii,jj} =
-% %'C:\Users\Amanda\Desktop\Research\Scripts\diver\PZ-Out_150625_Calib20150625_1620_results.mat';
-% %don't need - creates a double line b/c data is on 150709
-% jj = jj+1; fil{ii,jj} = [dir0, 'PZ-CE_161005_Calib20160531_0930_results.mat'];
-% %jj = jj+1; fil{ii,jj} = 'C:\Users\Amanda\Desktop\Research\Scripts\diver\PZ-Out_150812_Calib20150812_1910_results.mat';
-% % 
-% ii = ii+1; jj = 0; sitename{ii} = 'PZCW'; sitetype{ii} = 'P';
-% %jj = jj+1; fil{ii,jj} =
-% %'C:\Users\Amanda\Desktop\Research\Scripts\diver\PZ-Out_150625_Calib20150625_1620_results.mat';
-% %don't need - creates a double line b/c data is on 150709
-% jj = jj+1; fil{ii,jj} = [dir0, 'PZ-CW_161005_Calib20160531_0915_results.mat'];
-% %jj = jj+1; fil{ii,jj} = 'C:\Users\Amanda\Desktop\Research\Scripts\diver\PZ-Out_150812_Calib20150812_1910_results.mat';
+ii = ii+1; jj = 0; sitename{ii} = 'PZCC'; sitetype{ii} = 'P';
+jj = jj+1; fil{ii,jj} = [dir0, 'PZ-CC_161005_Calib20160531_0915_results.mat'];
+% 
+ii = ii+1; jj = 0; sitename{ii} = 'PZCE'; sitetype{ii} = 'P';
+%jj = jj+1; fil{ii,jj} =
+%'C:\Users\Amanda\Desktop\Research\Scripts\diver\PZ-Out_150625_Calib20150625_1620_results.mat';
+%don't need - creates a double line b/c data is on 150709
+jj = jj+1; fil{ii,jj} = [dir0, 'PZ-CE_161005_Calib20160531_0930_results.mat'];
+%jj = jj+1; fil{ii,jj} = 'C:\Users\Amanda\Desktop\Research\Scripts\diver\PZ-Out_150812_Calib20150812_1910_results.mat';
+% 
+ii = ii+1; jj = 0; sitename{ii} = 'PZCW'; sitetype{ii} = 'P';
+%jj = jj+1; fil{ii,jj} =
+%'C:\Users\Amanda\Desktop\Research\Scripts\diver\PZ-Out_150625_Calib20150625_1620_results.mat';
+%don't need - creates a double line b/c data is on 150709
+jj = jj+1; fil{ii,jj} = [dir0, 'PZ-CW_161005_Calib20160531_0915_results.mat'];
+%jj = jj+1; fil{ii,jj} = 'C:\Users\Amanda\Desktop\Research\Scripts\diver\PZ-Out_150812_Calib20150812_1910_results.mat';
 % % 
  ii = ii+1; jj = 0; sitename{ii} = 'E1'; sitetype{ii} = 'G';
 jj = jj+1; fil{ii,jj} = [dir0, 'E1_160530_Calib20160530_1930_results.mat'];
@@ -162,7 +158,7 @@ cmap = hsv(length(a));
 
 % colors for presentations
 clr_str1 = {'b'};
-clr_str2 = {'b', 'r', 'y', 'm'};
+clr_str2 = {'b', 'r', 'y', 'm','k','g','o'};
 clr_str3 = {'r', 'k', 'g', 'o', 'c'};
  
 % different lines for different types of sites
