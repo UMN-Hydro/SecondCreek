@@ -66,7 +66,6 @@ jj = jj+1; fil{ii,jj} = [dir0, 'SG-1_1st Position_161005_Calib20160531_0930_resu
  jj = jj+1; fil{ii,jj} = [dir0, 'SG-1_2nd_Position_161005_Calib20161001_1430_results.mat'];
 
 ii = ii+1; jj = 0; sitename{ii} = 'PZB'; sitetype{ii} = 'P';
-%jj = jj+1; fil{ii,jj} = 'C:\Users\Amanda\Desktop\Research\Scripts\diver\PZ-Bank_150709_results.mat';
 jj = jj+1; fil{ii,jj} = [dir0, 'PZ-Bank_161005_Calib20161002_1245_results.mat'];
 
 ii = ii+1; jj = 0; sitename{ii} = 'PZ-E'; sitetype{ii} = 'P';
@@ -77,64 +76,31 @@ jj = jj+1; fil{ii,jj} = [dir0, 'PZ-In_161005_Calib20160531_0900_results.mat'];
 
 
 ii = ii+1; jj = 0; sitename{ii} = 'PZO'; sitetype{ii} = 'P';
-%jj = jj+1; fil{ii,jj} =
-%'C:\Users\Amanda\Desktop\Research\Scripts\diver\PZ-Out_150625_Calib20150625_1620_results.mat';
-%don't need - creates a double line b/c data is on 150709
 jj = jj+1; fil{ii,jj} = [dir0, 'PZ-Out_161005_Calib20160531_0915_results.mat'];
-%jj = jj+1; fil{ii,jj} = 'C:\Users\Amanda\Desktop\Research\Scripts\diver\PZ-Out_150812_Calib20150812_1910_results.mat';
-% 
 
-
-% 
-% 
-% 
-% 
-
-% % 
-% 
 ii = ii+1; jj = 0; sitename{ii} = 'PZCC'; sitetype{ii} = 'P';
 jj = jj+1; fil{ii,jj} = [dir0, 'PZ-CC_161005_Calib20160531_0915_results.mat'];
-% 
+ 
 ii = ii+1; jj = 0; sitename{ii} = 'PZCE'; sitetype{ii} = 'P';
-%jj = jj+1; fil{ii,jj} =
-%'C:\Users\Amanda\Desktop\Research\Scripts\diver\PZ-Out_150625_Calib20150625_1620_results.mat';
-%don't need - creates a double line b/c data is on 150709
 jj = jj+1; fil{ii,jj} = [dir0, 'PZ-CE_161005_Calib20160531_0930_results.mat'];
-%jj = jj+1; fil{ii,jj} = 'C:\Users\Amanda\Desktop\Research\Scripts\diver\PZ-Out_150812_Calib20150812_1910_results.mat';
-% 
+ 
 ii = ii+1; jj = 0; sitename{ii} = 'PZCW'; sitetype{ii} = 'P';
-%jj = jj+1; fil{ii,jj} =
-%'C:\Users\Amanda\Desktop\Research\Scripts\diver\PZ-Out_150625_Calib20150625_1620_results.mat';
-%don't need - creates a double line b/c data is on 150709
 jj = jj+1; fil{ii,jj} = [dir0, 'PZ-CW_161005_Calib20160531_0915_results.mat'];
-%jj = jj+1; fil{ii,jj} = 'C:\Users\Amanda\Desktop\Research\Scripts\diver\PZ-Out_150812_Calib20150812_1910_results.mat';
-% % 
+ 
  ii = ii+1; jj = 0; sitename{ii} = 'E1'; sitetype{ii} = 'G';
 jj = jj+1; fil{ii,jj} = [dir0, 'E1_160530_Calib20160530_1930_results.mat'];
-% jj = jj+1; fil{ii,jj} = 'C:\Users\Amanda\Desktop\Research\Scripts\diver\E1_150812_Calib20150812_1940_results.mat';
-% jj = jj+1; fil{ii,jj} = 'C:\Users\Amanda\Desktop\Research\Scripts\diver\E1_151016_Calib20151016_1200_results.mat';
-% 
+
  ii = ii+1; jj = 0; sitename{ii} = 'A2'; sitetype{ii} = 'G';
 jj = jj+1; fil{ii,jj} = [dir0, 'A2_160530_Calib20160530_1900_results.mat'];
-% jj = jj+1; fil{ii,jj} = 'C:\Users\Amanda\Desktop\Research\Scripts\diver\A2_150709_results.mat';
-% jj = jj+1; fil{ii,jj} = 'C:\Users\Amanda\Desktop\Research\Scripts\diver\A2_150812_Calib20150812_1810_results.mat';
-% jj = jj+1; fil{ii,jj} = 'C:\Users\Amanda\Desktop\Research\Scripts\diver\A2_151016_Calib20151016_1200_results.mat';
-% 
-% 
+
 ii = ii+1; jj = 0; sitename{ii} = 'B1'; sitetype{ii} = 'G';
 jj = jj+1; fil{ii,jj} = [dir0, 'B1_160530_Calib20160530_1900_results.mat'];
-% jj = jj+1; fil{ii,jj} = 'C:\Users\Amanda\Desktop\Research\Scripts\diver\B1_150812_Calib20150812_1800_results.mat';
-% jj = jj+1; fil{ii,jj} = 'C:\Users\Amanda\Desktop\Research\Scripts\diver\B1_151016_Calib20151016_1200_results.mat';
-% 
+ 
  ii = ii+1; jj = 0; sitename{ii} = 'C1'; sitetype{ii} = 'G';
 jj = jj+1; fil{ii,jj} = [dir0, 'C1_160530_Calib20160530_1900_results'];
-% jj = jj+1; fil{ii,jj} = 'C:\Users\Amanda\Desktop\Research\Scripts\diver\C1_150812_Calib20150812_1700_results.mat';
-% jj = jj+1; fil{ii,jj} = 'C:\Users\Amanda\Desktop\Research\Scripts\diver\C1_151016_Calib20151016_1200_results.mat';
-% 
+
  ii = ii+1; jj = 0; sitename{ii} = 'D1'; sitetype{ii} = 'G';
 jj = jj+1; fil{ii,jj} = [dir0, 'D1_160530_Calib20160530_1915_results'];
-% jj = jj+1; fil{ii,jj} = 'C:\Users\Amanda\Desktop\Research\Scripts\diver\D1_150812_Calib20150710_1630_results.mat';
-% jj = jj+1; fil{ii,jj} = 'C:\Users\Amanda\Desktop\Research\Scripts\diver\D1_151016_Calib20151016_1200_results.mat';
 
 
 
