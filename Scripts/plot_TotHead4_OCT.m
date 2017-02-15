@@ -62,26 +62,22 @@ sitename = cell(nsites_max,1);
 sitetype = cell(nsites_max,1);
 ii = 0; 
 ii = ii+1; jj = 0; sitename{ii} = 'SG1'; sitetype{ii} = 'S';
-jj = jj+1; fil{ii,jj} = [dir0, 'SG-1_1st_Position_161005_Calib20160531_0915_results'];
- jj = jj+1; fil{ii,jj} = [dir0, 'SG-1_2nd_Position_161005_Calib20161001_1430_results'];
-
-
-ii = ii+1; jj = 0; sitename{ii} = 'SG1'; sitetype{ii} = 'S';
-jj = jj+1; fil{ii,jj} = [dir0, 'SG-1_1st Position_161005_Calib20160531_0930_results.mat'];
+jj = jj+1; fil{ii,jj} = [dir0, 'SG-1_1st_Position_161005_Calib20160531_0915_results.mat'];
  jj = jj+1; fil{ii,jj} = [dir0, 'SG-1_2nd_Position_161005_Calib20161001_1430_results.mat'];
+
 
 ii = ii+1; jj = 0; sitename{ii} = 'PZB'; sitetype{ii} = 'P';
 jj = jj+1; fil{ii,jj} = [dir0, 'PZ-Bank_161005_Calib20161002_1245_results.mat'];
 
 ii = ii+1; jj = 0; sitename{ii} = 'PZ-E'; sitetype{ii} = 'P';
-jj = jj+1; fil{ii,jj} = [dir0, 'PZ-E_161005_Calib20160531_0900_results.mat'];
+jj = jj+1; fil{ii,jj} = [dir0, 'PZ-E_161005_Calib20161001_1400_results.mat'];
 
 ii = ii+1; jj = 0; sitename{ii} = 'PZI'; sitetype{ii} = 'P';
-jj = jj+1; fil{ii,jj} = [dir0, 'PZ-In_161005_Calib20160531_0900_results.mat'];
+jj = jj+1; fil{ii,jj} = [dir0, 'PZ-In_161005_Calib20161001_1300_results.mat'];
 
 
 ii = ii+1; jj = 0; sitename{ii} = 'PZO'; sitetype{ii} = 'P';
-jj = jj+1; fil{ii,jj} = [dir0, 'PZ-Out_161005_Calib20160531_0915_results.mat'];
+jj = jj+1; fil{ii,jj} = [dir0, 'PZ-Out_161005_Calib20161001_1545_results.mat'];
 
 ii = ii+1; jj = 0; sitename{ii} = 'PZCC'; sitetype{ii} = 'P';
 jj = jj+1; fil{ii,jj} = [dir0, 'PZ-CC_161005_Calib20160531_0915_results.mat'];
@@ -90,7 +86,7 @@ ii = ii+1; jj = 0; sitename{ii} = 'PZCE'; sitetype{ii} = 'P';
 jj = jj+1; fil{ii,jj} = [dir0, 'PZ-CE_161005_Calib20160531_0930_results.mat'];
  
 ii = ii+1; jj = 0; sitename{ii} = 'PZCW'; sitetype{ii} = 'P';
-jj = jj+1; fil{ii,jj} = [dir0, 'PZ-CW_161005_Calib20160531_0915_results.mat'];
+jj = jj+1; fil{ii,jj} = [dir0, 'PZ-CC_161005_Calib20161001_1400_results.mat'];
  
  ii = ii+1; jj = 0; sitename{ii} = 'E1'; sitetype{ii} = 'G';
 jj = jj+1; fil{ii,jj} = [dir0, 'E1_160530_Calib20160530_1930_results.mat'];
