@@ -40,15 +40,15 @@ clear all, close all, fclose all;
 % DivLabel = 'PZ-Out';
 % DivLabel = 'PZ-Bank';
 % DivLabel = 'PZ-CW'; %added summer 2016
-%DivLabel = 'PZ-CC'; %added summer 2016
+DivLabel = 'PZ-CC'; %added summer 2016
  %DivLabel = 'PZ-CE'; %added summer 2016
-%DivLabel = 'PZ-E';
+% DivLabel = 'PZ-E';
 % DivLabel = 'A2';
 % DivLabel = 'B1';
 % DivLabel = 'C1';
 % DivLabel = 'D1';
 % DivLabel = 'E1';
-DivLabel = 'SG-1_1st_Position';
+%DivLabel = 'SG-1_1st_Position';
 % DivLabel = 'SG-1_2nd_Position';
 
 % =========================
@@ -652,7 +652,7 @@ if strcmp(date_label, '161005')
 
 
     elseif strcmp(DivLabel, 'PZ-Bank')
-        PVC_Elev = 430.288 * 100; % m -> cm [total station transit 10/02/16]
+        PVC_Elev = 429.336 * 100; % m -> cm [total station transit 10/02/16]
         SCDiver_fil = 'C:\SecondCreekGit\2016_data\2016_10_02\CSV_edit\pzb_5_161005162131_J3507.CSV';
        % ManualDate = '2016/05/31'; ManualTime = '11:15:00'; PVC_DepthToWater = 36.8; % cm (DO NOT TRUST BC FLOODED AND BUBBLES WHEN CAP REMOVED)  
 
@@ -686,7 +686,7 @@ if strcmp(date_label, '161005')
         SCDiver_fil = 'C:\SecondCreekGit\2016_data\2016_10_02\CSV_edit\pzcc_3_161005155030_M9438.CSV';
       %  ManualDate = '2016/05/31'; ManualTime = '09:15:00'; PVC_DepthToWater = 103.3; % cm (DO NOT TRUST BC FLOODED AND BUBBLES WHEN CAP REMOVED)  
 
-        ManualDate = '2016/10/01'; ManualTime = '14:00:00'; PVC_DepthToWater = 68.1; % cm
+        ManualDate = '2016/10/01'; ManualTime = '15:00:00'; PVC_DepthToWater = 68.1; % cm
         Div_Int_Min = 15; % time interval in min
         DivStartDate = '2016/05/31'; DivStartTime = '09:00:00';  % nan: use top of file
         DivEndDate = '2016/10/01'; DivEndTime = '14:00:00';  % nan: use end of file
