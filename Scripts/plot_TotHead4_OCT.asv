@@ -126,10 +126,10 @@ cmap = hsv(length(a));
 
 % colors for presentations
 clr_str1 = {'b'};
-clr_str2 = {'k', 'y', 'b', 'm',0',0,0};
+clr_str2 = {'o', 'c', 'b', 'm','k','g','r'};
 clr_str3 = {'r', 'm', 'g', 'k', 'c'};
 
-clr_str4 = {0, 0, 0, 0,'c','g','r'};
+clr_str4 = {0, 0, 0, 0,'g','g','g'};
 % different lines for different types of sites
 ctr = 0;
 
@@ -139,7 +139,7 @@ for tt = 1: 3
     switch tt
         case 1 % SW
             LW = 2;
-            linestr = ':*';
+            linestr = ':';
             ind = find(strcmp(sitetype, 'S'));
             clr_str = clr_str1;
         case 2 % PW
@@ -177,7 +177,6 @@ for tt = 1: 3
             
             elseif tt == 2 && ctr2 > 4 %used for clearing up cluttered plots
                   clr_str = clr_str4;
-                   linestr = '-.';
                 plotsym = [linestr, clr_str{ctr2}];
             else
                 plotsym = [linestr, clr_str{ctr2}];
