@@ -34,10 +34,10 @@ ntherm = 6 ; %number thermisters/probe
 %     SCTempProbeC_fil = 'C:\Users\Amanda\Desktop\Research\NewTempProbes2016\2016_08_01_download\Logger_C_20160801.txt' ;
 %     SCCal_fil = 'C:\Users\Amanda\Desktop\Research\Scripts\NewTempProbes\TempProbCalAvg_2016.dat' ;
         %file identifiers (o2016-03-31 download)
-    SCTempProbeA_fil = 'C:\SecondCreekGit\TempProbeAnalysis\TempProbeRawData_2016\2016_05_31_download\Logger_A_20160531txt' ;
-    SCTempProbeB_fil = 'C:\SecondCreekGit\TempProbeAnalysis\TempProbeRawData_2016\2016_05_31_download\Logger_B_20160531.txt' ;
-    SCTempProbeC_fil = 'C:\SecondCreekGit\TempProbeAnalysis\TempProbeRawData_2016\2016_05_31_download\Logger_C_20160531.txt' ;
-    SCCal_fil = 'C:\SecondCreekGit\TempProbeAnalysis\TempProbeRawData_2016\2016_05_31_download\.txt' ;
+    SCTempProbeA_fil = 'C:\SecondCreekGit\TempProbeAnalysis\TempProbeRawData_2016\2016_08_01_download\Logger_A_20160801.txt' ;
+    SCTempProbeB_fil = 'C:\SecondCreekGit\TempProbeAnalysis\TempProbeRawData_2016\2016_08_01_download\Logger_B_20160801.txt' ;
+    SCTempProbeC_fil = 'C:\SecondCreekGit\TempProbeAnalysis\TempProbeRawData_2016\2016_08_01_download\Logger_C_20160801.txt' ;
+    SCCal_fil = 'C:\SecondCreekGit\TempProbeAnalysis\TempProbe\TempProbCalAvg_2016.dat' ;
     
     %read csv file
     TP_A = csvread(SCTempProbeA_fil);
