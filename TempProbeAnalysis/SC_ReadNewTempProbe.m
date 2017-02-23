@@ -203,11 +203,11 @@ writetable (Table_C, 'TPC_CalibData_datetime_20160804.csv')
 
 
 
-TempProTimeA = datestr(unix_A,'mm/dd/yyyy');
-TempProTimeB = datestr(unix_B,'mm/dd/yyyy');
-TempProTimeC = datestr(unix_C,'mm/dd/yyyy');
+TempProTimeA = datestr(Time_trim_A,'mm/dd/yyyy HH:MM');
+%TempProTimeB = datestr(unix_B,'mm/dd/yyyy');
+%TempProTimeC = datestr(unix_C,'mm/dd/yyyy');
+TableTemp_A= table([TempProTimeA], [TP_A_meanCAL]);
 
-
-csvwrite('TPA_CalibData_1DTempPro.csv',TempProTimeA);
-csvwrite('TPB_CalibData_1DTempPro.csv',TempProTimeB);
-csvwrite('TPC_CalibData_1DTempPro.csv',TempProTimeC);
+writetable(TableTemp_A,'TPA_CalibData_1DTempPro.csv')
+%writetable(TempProTimeB,'TPA_CalibData_1DTempPro.csv')
+%writetable(TempProTimeC,'TPC_CalibData_1DTempPro.csv')
