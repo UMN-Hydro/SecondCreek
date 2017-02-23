@@ -203,11 +203,11 @@ writetable (Table_C, 'TPC_CalibData_datetime_20160804.csv')
 
 
 
-TempProTimeA = datestr(unix_A,'mm/dd/yyyy');
-TempProTimeB = datestr(unix_B,'mm/dd/yyyy');
-TempProTimeC = datestr(unix_C,'mm/dd/yyyy');
+TempProTimeA = datestr(,mm/dd/yy);
+TempProTimeB = datestr();
+TempProTimeC = datestr();
 
 
-csvwrite('TPA_CalibData_1DTempPro.csv',TempProTimeA);
-csvwrite('TPB_CalibData_1DTempPro.csv',TempProTimeB);
-csvwrite('TPC_CalibData_1DTempPro.csv',TempProTimeC);
+csvwrite('TPA_CalibData_1DTempPro.csv',final_A);
+csvwrite('TPB_CalibData_1DTempPro.csv',final_B);
+csvwrite('TPC_CalibData_1DTempPro.csv',final_C);
