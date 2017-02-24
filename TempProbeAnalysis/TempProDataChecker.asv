@@ -1,0 +1,24 @@
+%Script to determine if theere are non-numeric entries in the 1D TempProbe
+%data file
+
+CheckFile = 'C:\SecondCreekGit\TempProbeAnalysis\TPA_CalibData_1DTempPro.csv';
+File_A = csvread(CheckFile,1,1);
+Time=csvread(CheckFile,0,0);
+ [rows columns] = size(File_A)
+
+if File_A == 0;
+    disp('zero')
+end
+
+if isnumeric(File_A);
+    disp('numbers')
+else 
+    disp('not')
+end
+
+% lets try rounding the values
+File_A = round(File_A *100)/100
+
+% for i=1:rows;
+%     for j=1:columns:
+%         
