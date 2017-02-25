@@ -204,12 +204,14 @@ writetable (Table_C, 'TPC_CalibData_datetime_20160804.csv')
 
 
 TempProTimeA = datestr(Time_trim_A,'mm/dd/yyyy HH:MM');
-%TempProTimeB = datestr(unix_B,'mm/dd/yyyy');
+TempProTimeB = datestr(Time_trim_B,'mm/dd/yyyy HH:MM');
 %TempProTimeC = datestr(unix_C,'mm/dd/yyyy');
 
-TP_A_meanCAL= round(TP_A_meanCAL *100)/100; %test to see if this makes a defference for 1dtemppro
 TableTemp_A= table([TempProTimeA], [TP_A_meanCAL]);
+TableTemp_B= table([TempProTimeB], [TP_B_meanCAL]);
 
 writetable(TableTemp_A,'TPA_CalibData_1DTempPro.csv')
+writetable(TableTemp_B,'TPB_CalibData_1DTempPro.csv')
+
 %writetable(TempProTimeB,'TPA_CalibData_1DTempPro.csv')
 %writetable(TempProTimeC,'TPC_CalibData_1DTempPro.csv')
