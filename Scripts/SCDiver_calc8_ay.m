@@ -40,7 +40,7 @@ clear all, close all, fclose all;
 % DivLabel = 'PZ-Out';
 % DivLabel = 'PZ-Bank';
 % DivLabel = 'PZ-CW'; %added summer 2016
-DivLabel = 'PZ-CC'; %added summer 2016
+%DivLabel = 'PZ-CC'; %added summer 2016
  %DivLabel = 'PZ-CE'; %added summer 2016
 % DivLabel = 'PZ-E';
 % DivLabel = 'A2';
@@ -48,7 +48,7 @@ DivLabel = 'PZ-CC'; %added summer 2016
 % DivLabel = 'C1';
 % DivLabel = 'D1';
 % DivLabel = 'E1';
-%DivLabel = 'SG-1_1st_Position';
+DivLabel = 'SG-1_1st_Position';
 % DivLabel = 'SG-1_2nd_Position';
 
 % =========================
@@ -606,7 +606,7 @@ if strcmp(date_label, '161005')
     DivEndDate = nan; DivEndTime = nan;  % nan: use end of file
     if strcmp(DivLabel, 'SG-1_1st_Position')  %split dis up, moved on august first
        
-        PVC_Elev = 428.757 * 100; % m -> cm [total station transit 10/01/16]
+        PVC_Elev = 429.092 * 100; % m -> cm [total station transit 10/01/16]
         SCDiver_fil = 'C:\SecondCreekGit\2016_data\2016_10_02\CSV_edit\sg1_4_161005161403_H2366FirstPlacement.csv'; 
 %         ManualDate = '2015/06/25'; ManualTime = '16:30:00'; PVC_DepthToWater = 75; % cm
 %         ManualDate = '2015/07/10'; ManualTime = '09:30:00'; PVC_DepthToWater = 88.7; % cm
