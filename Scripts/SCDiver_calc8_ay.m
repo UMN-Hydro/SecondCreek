@@ -610,10 +610,10 @@ if strcmp(date_label, '161005')
         SCDiver_fil = 'C:\SecondCreekGit\2016_data\2016_10_02\CSV_edit\sg1_4_161005161403_H2366FirstPlacement.csv'; 
 %         ManualDate = '2015/06/25'; ManualTime = '16:30:00'; PVC_DepthToWater = 75; % cm
 %         ManualDate = '2015/07/10'; ManualTime = '09:30:00'; PVC_DepthToWater = 88.7; % cm
-        ManualDate = '2016/05/31'; ManualTime = '09:15:00'; PVC_DepthToWater = 62.4; % cm 
+        ManualDate = '2016/05/31'; ManualTime = '09:45:00'; PVC_DepthToWater = 62.4; % cm 
         Div_Int_Min = 15; % time interval in min
-        DivStartDate = '2016/05/31'; DivStartTime = '09:00:00';  % nan: use top of file
-        DivEndDate = '2016/08/01'; DivEndTime = '14:45:00';  % nan: use end of file
+        DivStartDate = '2016/05/31'; DivStartTime = '09:45:00';  % nan: use top of file
+        DivEndDate = '2016/08/01'; DivEndTime = '13:00:00';  % nan: use end of file
      %   DiverElev =  428.137330 * 100;
 
     elseif strcmp(DivLabel, 'SG-1_2nd_Position')  %split dis up, moved on august first

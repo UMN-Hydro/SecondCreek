@@ -51,6 +51,15 @@ clear all, close all, fclose all;
 % /home/gcng/workspace/matlab_files/SecondCreek/Calib_all_150812.txt
 % (probably best to compare back with Diver Elev found in previous months)
 
+
+
+
+
+% == 3/1/2017 =========================================================
+% This is the most accurate and up to date script for plotting all of the
+% head measurments together. The section that assigns colors to each
+% measurment device was updated to accomodate the additional devices used
+% during the summer of 2016
 % save to this figure name
 figname ='All_TotHead_161005download.tiff';
 dir0='C:\SecondCreekGit\Scripts\';
@@ -62,7 +71,7 @@ sitename = cell(nsites_max,1);
 sitetype = cell(nsites_max,1);
 ii = 0; 
 ii = ii+1; jj = 0; sitename{ii} = 'SG1'; sitetype{ii} = 'S';
-jj = jj+1; fil{ii,jj} = [dir0, 'SG-1_1st_Position_161005_Calib20160531_0915_results.mat'];
+jj = jj+1; fil{ii,jj} = [dir0, 'SG-1_1st_Position_161005_Calib20160531_0945_results.mat'];
  jj = jj+1; fil{ii,jj} = [dir0, 'SG-1_2nd_Position_161005_Calib20161001_1430_results.mat'];
 
 
