@@ -4,10 +4,15 @@
 CheckFile = 'C:\SecondCreekGit\TempProbeAnalysis\TPA_CalibData_1DTempPro.csv';
 File_A = csvread(CheckFile,1,1);
 
+ [rows columns] = size(File_A);
 
 
- sum (File_A, 'includenan' )%If these two sums are the same, the file should be good
- sum (File_A, 'omitnan' )
+sum (File_A < 0)
 
-sum(isnan(File_A)) %If this is zero, file should be good to go
+
+if isnumeric(File_A)
+    disp('numbers')
+else 
+    disp('not')
+end
     

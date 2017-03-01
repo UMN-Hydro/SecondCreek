@@ -23,6 +23,8 @@
 %   - 8/27/15: change file names to include calibration date and time
 %     (i.e., date/time of manual depth-to-water measurement) 
 
+% 3/1/2017
+% Most up to date SC_Diver script. Produces correct plots for 2016 data.
 
 clear all, close all, fclose all;
 

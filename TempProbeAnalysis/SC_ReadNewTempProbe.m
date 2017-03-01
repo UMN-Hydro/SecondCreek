@@ -9,6 +9,12 @@
     % Incorporates calibraion values for each thermister (see
     % C:\Users\Amanda\Desktop\Research\Scripts\NewTempProbes\ReadCalData.m)
 
+    
+%3/1/17
+%Updated to output a temperature file compatible with 1D Temp Probe Pro
+%  -Jack
+
+
 clear all
 close all
 format long g %gets rids of scientific notation
@@ -201,7 +207,7 @@ writetable (Table_C, 'TPC_CalibData_datetime_20160804.csv')
 % ... 
 % DATE TIME, TEMP1, TEMP2, ... , TEMP_N
 
-
+%Write data to a cile compatible with 1DTempProbe Pro V2
 
 TempProTimeA = datestr(Time_trim_A,'mm/dd/yyyy HH:MM');
 TempProTimeB = datestr(Time_trim_B,'mm/dd/yyyy HH:MM');
