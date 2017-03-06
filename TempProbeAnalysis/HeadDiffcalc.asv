@@ -1,5 +1,9 @@
 % Calculate difference between head at SG-1 nad PZ-CC
 
+
+clear all
+close all
+format long g
 %import necessary files
 PZCC = load( 'C:\SecondCreekGit\Scripts\PZ-CC_161005_Calib20161001_1300_results.mat')
 SG11 = load('C:\SecondCreekGit\Scripts\SG-1_1st_Position_161005_Calib20160531_0945_results.mat')
@@ -47,13 +51,15 @@ headDiff1 = PZCCadjustedH-SG11adjustedH;
 
 
  %fileID = 'TPA_headDiff1_1DTempPro.csv';
-fileID =  fopen('d.csv', 'w'); %wahts up doc?
+
+ 
+fileID = fopen('C:\SecondCreekGit\TempProbeAnalysis\HeadDiff1_1DTempPro.csv','w');
  [nrows, ncols] = size(SG11adjustedH);
 
-fprintf(fileID, '');
+
 for row = 1:nrows
    
-        fprintf(fileID, 'sc%s%f\r\n', SG11adjustedT(row,1), ', ', headDiff1(row,1));
+   fprintf(fileID, '%s%s%f\r\n', SG11adjustedT , ', ', headDiff1(row,1));
 end
 
 %repeat for second chunk of summer
@@ -101,14 +107,14 @@ headDiff2 = PZCCadjustedH-SG12adjustedH;
 
 
 
- fileID = 'TPA_headDiff2_1DTempPro.csv';
- fopen(fileID, 'w');
-[nrows, ncols] = size(SG11adjustedH);
+ fileID = fopen('C:\SecondCreekGit\TempProbeAnalysis\HeadDiff1_1DTempPro.csv','w');
+
+[nrows, ncols] = size(SG12adjustedH);
 
 
 for row = 1:nrows
    
-        fprintf(fileID, '%s%s%f\r\n', SG12adjustedT(row), ', ', headDiff2(row));
+        fprintf(fileID, '%s%s%f\r\n', SG12adjustedT(row,1), ', ', headDiff2(row,1));
 end
 
 

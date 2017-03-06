@@ -5,9 +5,9 @@ clear all
 close all
 format long g
 %import necessary files
-PZCC = load( 'C:\SecondCreekGit\Scripts\PZ-CC_161005_Calib20161001_1300_results.mat')
-SG11 = load('C:\SecondCreekGit\Scripts\SG-1_1st_Position_161005_Calib20160531_0945_results.mat')
-SG12 = load('C:\SecondCreekGit\Scripts\SG-1_2nd_Position_161005_Calib20161001_1430_results.mat')
+PZCC = load( 'C:\SecondCreekGit\Scripts\PZ-CC_161005_Calib20161001_1300_results.mat');
+SG11 = load('C:\SecondCreekGit\Scripts\SG-1_1st_Position_161005_Calib20160531_0945_results.mat');
+SG12 = load('C:\SecondCreekGit\Scripts\SG-1_2nd_Position_161005_Calib20161001_1430_results.mat');
 
 %extract date data
 dateSG11 = datenum(SG11.DivDateTime);
@@ -34,6 +34,8 @@ SG11adjustedT= dateSG11(SG11strt : SG11end);
 SG11adjustedT = datestr(SG11adjustedT, 'mm/dd/yyyy HH:MM');
 PZCCadjustedT = datestr(PZCCadjustedT, 'mm/dd/yyyy HH:MM');
 
+PZCCadjustedT= table(PZCCadjustedT);
+SG11adjustedT= table(SG11adjustedT);
 
 
 %import head data
@@ -52,14 +54,14 @@ headDiff1 = PZCCadjustedH-SG11adjustedH;
 
  %fileID = 'TPA_headDiff1_1DTempPro.csv';
 
-
-fileID = fopen('HeadDiff1_1DTempPro.csv','w');
+ 
+fileID = fopen('C:\SecondCreekGit\TempProbeAnalysis\HeadDiff1_1DTempPro.csv','w');
  [nrows, ncols] = size(SG11adjustedH);
 
 
 for row = 1:nrows
    
-   fprintf(fileID, '%s%s%f\r\n', SG11adjustedT(row,1), ', ', headDiff1(row,1));
+   fprintf(fileID, '%s%s%f\r\n', SG11adjustedT{row,1} , ', ', headDiff1(row,1));
 end
 
 %repeat for second chunk of summer
@@ -84,6 +86,8 @@ SG12adjustedT= dateSG11(SG12strt : SG11end);
 SG12adjustedT = datestr(SG12adjustedT, 'mm/dd/yyyy HH:MM');
 PZCCadjustedT = datestr(PZCCadjustedT, 'mm/dd/yyyy HH:MM');
 
+PZCCadjustedT= table(PZCCadjustedT);
+SG12adjustedT= table(SG12adjustedT);
 
 
 %import head data
@@ -107,14 +111,14 @@ headDiff2 = PZCCadjustedH-SG12adjustedH;
 
 
 
- fileID = 'TPA_headDiff2_1DTempPro.csv';
- fopen(fileID, 'w');
-[nrows, ncols] = size(SG11adjustedH);
+ fileID = fopen('C:\SecondCreekGit\TempProbeAnalysis\HeadDiff2_1DTempPro.csv','w');
+
+[nrows, ncols] = size(SG12adjustedH);
 
 
 for row = 1:nrows
    
-        fprintf(fileID, '%s%s%f\r\n', SG12adjustedT(row), ', ', headDiff2(row));
+        fprintf(fileID, '%s%s%f\r\n', SG12adjustedT{row,1}, ', ', headDiff2(row,1));
 end
 
 
