@@ -199,25 +199,23 @@ Table_C = table([Time_trim_C],[TP_C_meanCAL]);
 % writetable (Table_C, 'TPC_CalibData_datetime_20160804.csv')
 
 
-% .csv file compatible with 1DTempPro v2.0
 
+%Write data to a file compatible with 1DTempProbe Pro V2:
 %
 % (blank, or comment with no ‘,’ ), DEPTH1 (in m), DEPTH2, ... , DEPTH_N
 % DATE TIME, TEMP1, TEMP2, ... , TEMP_N
 % ... 
 % DATE TIME, TEMP1, TEMP2, ... , TEMP_N
 
-%Write data to a cile compatible with 1DTempProbe Pro V2
-
 TempProTimeA = datestr(Time_trim_A,'mm/dd/yyyy HH:MM');
-%TempProTimeB = datestr(Time_trim_B,'mm/dd/yyyy HH:MM');
-%TempProTimeC = datestr(unix_C,'mm/dd/yyyy');
+TempProTimeB = datestr(Time_trim_B,'mm/dd/yyyy HH:MM');
+TempProTimeC = datestr(Time_trim_C,'mm/dd/yyyy HH:MM');
+
 
 TableTemp_A= table(TempProTimeA);
-%TableTemp_B= table([TempProTimeB], [TP_B_meanCAL]);
-% 
-% writetable(TableTemp_A,'TPA_CalibData_1DTempPro.csv')
-% writetable(TableTemp_B,'TPB_CalibData_1DTempPro.csv')
+TableTemp_B= table(TempProTimeB);
+TableTemp_C= table(TempProTimeC);
+
 
 fileID = fopen('TPA_CalibData_1DTempPro.csv','w');
 [nrows,ncols] = size(TP_A_meanCAL);
@@ -230,6 +228,40 @@ for row = 1:nrows
             fprintf(fileID,'%f\r\n',TP_A_meanCAL(row,col));
         else
             fprintf(fileID,'%f%s',TP_A_meanCAL(row,col-1),', ');
+        end
+    end
+end
+
+
+
+fileID = fopen('TPB_CalibData_1DTempPro.csv','w');
+[nrows,ncols] = size(TP_B_meanCAL);
+fprintf(fileID, '%s\r\n',', 0, 0.05, 0.1, 0.15, 0.2, 0.3');
+for row = 1:nrows
+    for col = (ncols+1):-1:1
+        if col ==(ncols+1)
+            fprintf(fileID,'%s%s',TableTemp_B{row,1}, ', ');
+        elseif col == 1
+            fprintf(fileID,'%f\r\n',TP_B_meanCAL(row,col));
+        else
+            fprintf(fileID,'%f%s',TP_B_meanCAL(row,col-1),', ');
+        end
+    end
+end
+
+
+
+fileID = fopen('TPC_CalibData_1DTempPro.csv','w');
+[nrows,ncols] = size(TP_C_meanCAL);
+fprintf(fileID, '%s\r\n',', 0, 0.05, 0.1, 0.15, 0.2, 0.3');
+for row = 1:nrows
+    for col = (ncols+1):-1:1
+        if col ==(ncols+1)
+            fprintf(fileID,'%s%s',TableTemp_C{row,1}, ', ');
+        elseif col == 1
+            fprintf(fileID,'%f\r\n',TP_C_meanCAL(row,col));
+        else
+            fprintf(fileID,'%f%s',TP_C_meanCAL(row,col-1),', ');
         end
     end
 end
