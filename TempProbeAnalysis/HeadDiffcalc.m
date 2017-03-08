@@ -60,7 +60,7 @@ headDiff1 = PZCC1adjustedH-SG11adjustedH;
 
  
 fileID = fopen('C:\SecondCreekGit\TempProbeAnalysis\HeadDiff1_1DTempPro.csv','w');
- [nrows, ncols] = size(SG11adjustedH);
+ [nrows, ncols] = size(SG11adjustedH) ;
 
 
 for row = 1:nrows
@@ -117,12 +117,16 @@ headDiff2 = PZCC2adjustedH-SG12adjustedH;
 
  fileID = fopen('C:\SecondCreekGit\TempProbeAnalysis\HeadDiff2_1DTempPro.csv','w');
 
-[nrows, ncols] = size(SG12adjustedH);
-
-
+[nSG11, ncols] =  size(SG11adjustedH);
+[nSG12, col] = size(SG12adjustedH);
+nrows = nrows + nSG12;
 for row = 1:nrows
-   
-        fprintf(fileID, '%s%s%f\r\n', SG12adjustedT{row,1}, ', ', headDiff2(row,1));
+   if row <= nSG11
+              fprintf(fileID, '%s%s%f\r\n', SG11adjustedT{row,1} , ', ', headDiff1(row,1));
+   else
+       
+       fprintf(fileID, '%s%s%f\r\n', SG12adjustedT{row- nSG11,1}, ', ', headDiff2(row - nSG11,1));
+   end
 end
 
 
