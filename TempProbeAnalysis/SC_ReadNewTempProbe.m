@@ -9,6 +9,12 @@
     % Incorporates calibraion values for each thermister (see
     % C:\Users\Amanda\Desktop\Research\Scripts\NewTempProbes\ReadCalData.m)
 
+    
+%3/1/17
+%Updated to output a temperature file compatible with 1D Temp Probe Pro
+%  -Jack
+
+
 clear all
 close all
 format long g %gets rids of scientific notation
@@ -188,13 +194,76 @@ Table_A = table([Time_trim_A],[TP_A_meanCAL]);
 Table_B = table([Time_trim_B],[TP_B_meanCAL]);
 Table_C = table([Time_trim_C],[TP_C_meanCAL]);
 
-writetable (Table_A, 'TPA_CalibData_datetime_20160804.csv')
-writetable (Table_B, 'TPB_CalibData_datetime_20160804.csv')
-writetable (Table_C, 'TPC_CalibData_datetime_20160804.csv')
+% writetable (Table_A, 'TPA_CalibData_datetime_20160804.csv', 'Delimiter','$')
+% writetable (Table_B, 'TPB_CalibData_datetime_20160804.csv')
+% writetable (Table_C, 'TPC_CalibData_datetime_20160804.csv')
 
 
 
-    
+%Write data to a file compatible with 1DTempProbe Pro V2:
+%
+% (blank, or comment with no ‘,’ ), DEPTH1 (in m), DEPTH2, ... , DEPTH_N
+% DATE TIME, TEMP1, TEMP2, ... , TEMP_N
+% ... 
+% DATE TIME, TEMP1, TEMP2, ... , TEMP_N
+
+TempProTimeA = datestr(Time_trim_A,'mm/dd/yyyy HH:MM');
+TempProTimeB = datestr(Time_trim_B,'mm/dd/yyyy HH:MM');
+TempProTimeC = datestr(Time_trim_C,'mm/dd/yyyy HH:MM');
+
+
+TableTemp_A= table(TempProTimeA);
+TableTemp_B= table(TempProTimeB);
+TableTemp_C= table(TempProTimeC);
+
+
+fileID = fopen('TPA_CalibData_1DTempPro.csv','w');
+[nrows,ncols] = size(TP_A_meanCAL);
+fprintf(fileID, '%s\r\n',', 0, 0.05, 0.1, 0.15, 0.2, 0.3');
+for row = 1:nrows
+    for col = (ncols+1):-1:1
+        if col ==(ncols+1)
+            fprintf(fileID,'%s%s',TableTemp_A{row,1}, ', ');
+        elseif col == 1
+            fprintf(fileID,'%f\r\n',TP_A_meanCAL(row,col));
+        else
+            fprintf(fileID,'%f%s',TP_A_meanCAL(row,col-1),', ');
+        end
+    end
+end
 
 
 
+fileID = fopen('TPB_CalibData_1DTempPro.csv','w');
+[nrows,ncols] = size(TP_B_meanCAL);
+fprintf(fileID, '%s\r\n',', 0, 0.05, 0.1, 0.15, 0.2, 0.3');
+for row = 1:nrows
+    for col = (ncols+1):-1:1
+        if col ==(ncols+1)
+            fprintf(fileID,'%s%s',TableTemp_B{row,1}, ', ');
+        elseif col == 1
+            fprintf(fileID,'%f\r\n',TP_B_meanCAL(row,col));
+        else
+            fprintf(fileID,'%f%s',TP_B_meanCAL(row,col-1),', ');
+        end
+    end
+end
+
+
+
+fileID = fopen('TPC_CalibData_1DTempPro.csv','w');
+[nrows,ncols] = size(TP_C_meanCAL);
+fprintf(fileID, '%s\r\n',', 0, 0.05, 0.1, 0.15, 0.2, 0.3');
+for row = 1:nrows
+    for col = (ncols+1):-1:1
+        if col ==(ncols+1)
+            fprintf(fileID,'%s%s',TableTemp_C{row,1}, ', ');
+        elseif col == 1
+            fprintf(fileID,'%f\r\n',TP_C_meanCAL(row,col));
+        else
+            fprintf(fileID,'%f%s',TP_C_meanCAL(row,col-1),', ');
+        end
+    end
+end
+%writetable(TempProTimeB,'TPA_CalibData_1DTempPro.csv')
+%writetable(TempProTimeC,'TPC_CalibData_1DTempPro.csv')
