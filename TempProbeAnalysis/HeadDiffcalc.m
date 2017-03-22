@@ -120,13 +120,11 @@ headDiff2 = PZCC2adjustedH-SG12adjustedH;
 [nSG11, ncols] =  size(SG11adjustedH);
 [nSG12, col] = size(SG12adjustedH);
 nrows = nrows + nSG12;
-for row = 1:nrows
-   if row <= nSG11
-              fprintf(fileID, '%s%s%f\r\n', SG11adjustedT{row,1} , ', ', headDiff1(row,1));
-   else
+for row = 1:nSG12
+  
        
-       fprintf(fileID, '%s%s%f\r\n', SG12adjustedT{row- nSG11,1}, ', ', headDiff2(row - nSG11,1));
-   end
+       fprintf(fileID, '%s%s%f\r\n', SG12adjustedT{row,1}, ', ', headDiff2(row,1));
+   
 end
 
 
