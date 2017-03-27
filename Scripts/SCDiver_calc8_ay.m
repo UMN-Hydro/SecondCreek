@@ -39,7 +39,7 @@ clear all, close all, fclose all;
 % - Choose one transducer
 % DivLabel = 'SG-1 2015';
 % DivLabel = 'PZ-In';
-% DivLabel = 'PZ-Out';
+ DivLabel = 'PZ-Out';
 % DivLabel = 'PZ-Bank';
 % DivLabel = 'PZ-CW'; %added summer 2016
 %DivLabel = 'PZ-CC'; %added summer 2016
@@ -50,7 +50,7 @@ clear all, close all, fclose all;
 % DivLabel = 'C1';
 % DivLabel = 'D1';
 % DivLabel = 'E1';
-DivLabel = 'SG-1_1st_Position';
+%DivLabel = 'SG-1_1st_Position';
 % DivLabel = 'SG-1_2nd_Position';
 
 % =========================
@@ -646,9 +646,9 @@ if strcmp(date_label, '161005')
         SCDiver_fil = 'C:\SecondCreekGit\2016_data\2016_10_02\CSV_edit\pzo_1_161005162522_J3542.CSV';
  %      ManualDate = '2016/05/31'; ManualTime = '09:15:00'; PVC_DepthToWater = 55.7; % cm (DO NOT TRUST BC FLOODED AND BUBBLES WHEN CAP REMOVED)  
 
-      ManualDate = '2016/10/01'; ManualTime = '15:45:00'; PVC_DepthToWater = 24.8; % cm (DO NOT TRUST BC FLOODED AND BUBBLES WHEN CAP REMOVED)  
+        ManualDate = '2016/10/01'; ManualTime = '15:45:00'; PVC_DepthToWater = 24.8; % cm (DO NOT TRUST BC FLOODED AND BUBBLES WHEN CAP REMOVED)  
         Div_Int_Min = 15; % time interval in min
-        DivStartDate = '2016/05/31'; DivStartTime = '09:15:00';  % nan: use top of file
+        DivStartDate = '2016/06/14'; DivStartTime = '12:15:00';  % nan: use top of file
         DivEndDate = '2016/10/01'; DivEndTime = '15:45:00';  % nan: use end of file
    %     DiverElev =  428.139830 *100;
 
@@ -680,7 +680,7 @@ if strcmp(date_label, '161005')
 
         ManualDate = '2016/10/01'; ManualTime = '14:00:00'; PVC_DepthToWater = 33.6; % cm
         Div_Int_Min = 15; % time interval in min
-        DivStartDate = '2016/05/31'; DivStartTime = '09:30:00';  % nan: use top of file
+        DivStartDate = '2016/06/04'; DivStartTime = '03:30:00';  % nan: use top of file
         DivEndDate = '2016/10/01'; DivEndTime = '14:00:00';  % nan: use end of file
       %  DiverElev = 427.338500*100;
     elseif strcmp(DivLabel, 'PZ-CC')
