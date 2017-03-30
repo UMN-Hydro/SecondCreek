@@ -39,11 +39,11 @@ clear all, close all, fclose all;
 % - Choose one transducer
 % DivLabel = 'SG-1 2015';
 % DivLabel = 'PZ-In';
- DivLabel = 'PZ-Out';
+ %DivLabel = 'PZ-Out';
 % DivLabel = 'PZ-Bank';
-% DivLabel = 'PZ-CW'; %added summer 2016
+ DivLabel = 'PZ-CW'; %added summer 2016
 %DivLabel = 'PZ-CC'; %added summer 2016
- %DivLabel = 'PZ-CE'; %added summer 2016
+%  DivLabel = 'PZ-CE'; %added summer 2016
 % DivLabel = 'PZ-E';
 % DivLabel = 'A2';
 % DivLabel = 'B1';
@@ -51,7 +51,7 @@ clear all, close all, fclose all;
 % DivLabel = 'D1';
 % DivLabel = 'E1';
 %DivLabel = 'SG-1_1st_Position';
-% DivLabel = 'SG-1_2nd_Position';
+%  DivLabel = 'SG-1_2nd_Position';
 
 % =========================
 % 6/25/15
@@ -615,7 +615,7 @@ if strcmp(date_label, '161005')
         ManualDate = '2016/05/31'; ManualTime = '09:45:00'; PVC_DepthToWater = 62.4; % cm 
         Div_Int_Min = 15; % time interval in min
         DivStartDate = '2016/05/31'; DivStartTime = '09:45:00';  % nan: use top of file
-        DivEndDate = '2016/08/01'; DivEndTime = '13:00:00';  % nan: use end of file
+        DivEndDate = '2016/07/25'; DivEndTime = '17:00:00';  % nan: use end of file
      %   DiverElev =  428.137330 * 100;
 
     elseif strcmp(DivLabel, 'SG-1_2nd_Position')  %split dis up, moved on august first
@@ -627,7 +627,7 @@ if strcmp(date_label, '161005')
         ManualDate = '2016/10/01'; ManualTime = '14:30:00'; PVC_DepthToWater = -3.9; % cm 
         Div_Int_Min = 15; % time interval in min
         DivStartDate = '2016/08/01'; DivStartTime = '15:00:00';  % nan: use top of file
-        DivEndDate = '2016/10/01'; DivEndTime = '14:30:00';  % nan: use end of file
+        DivEndDate = '2016/09/30'; DivEndTime = '14:30:00';  % nan: use end of file
      %      DiverElev =  428.111420*100;
     % *********************
 
@@ -681,7 +681,7 @@ if strcmp(date_label, '161005')
         ManualDate = '2016/10/01'; ManualTime = '14:00:00'; PVC_DepthToWater = 33.6; % cm
         Div_Int_Min = 15; % time interval in min
         DivStartDate = '2016/06/04'; DivStartTime = '03:30:00';  % nan: use top of file
-        DivEndDate = '2016/10/01'; DivEndTime = '14:00:00';  % nan: use end of file
+        DivEndDate = '2016/09/30'; DivEndTime = '14:00:00';  % nan: use end of file
       %  DiverElev = 427.338500*100;
     elseif strcmp(DivLabel, 'PZ-CC')
         PVC_Elev = 429.558 * 100; % m -> cm [total station transit averaged 10/01/16 and 10/02/16]
@@ -701,7 +701,7 @@ if strcmp(date_label, '161005')
        ManualDate = '2016/10/01'; ManualTime = '14:15:00'; PVC_DepthToWater = 49.4; % cm
         Div_Int_Min = 15; % time interval in min
         DivStartDate = '2016/05/31'; DivStartTime = '09:30:00';  % nan: use top of file
-        DivEndDate = '2016/10/01'; DivEndTime = '14:15:00';  % nan: use end of file
+        DivEndDate = '2016/09/30'; DivEndTime = '14:15:00';  % nan: use end of file
       %   DiverElev =  427.418500 *100;
 %
 %     elseif strcmp(DivLabel, 'A2')

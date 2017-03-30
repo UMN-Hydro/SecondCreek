@@ -2,7 +2,7 @@
 PZ-CE on 2016/10/01, 14:15:00: 
    Manual Depth to Water:   0.494000 m (1.62073 ft)
    TOC Elev: 429.342000 m (1408.6 ft)
-   Diver Elev: 427.418500 m (1402.29 ft)
-   Diver TotHead: 428.848000 m (1406.98 ft)
+   Diver Elev:  m ( ft)
+   Diver TotHead:  m ( ft)
 ----------------------------------------------
 

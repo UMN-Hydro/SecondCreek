@@ -74,13 +74,13 @@ ii = ii+1; jj = 0; sitename{ii} = 'SG1'; sitetype{ii} = 'S';
 jj = jj+1; fil{ii,jj} = [dir0, 'SG-1_1st_Position_161005_Calib20160531_0945_results.mat'];
  jj = jj+1; fil{ii,jj} = [dir0, 'SG-1_2nd_Position_161005_Calib20161001_1430_results.mat'];
 
-% 
+
 ii = ii+1; jj = 0; sitename{ii} = 'PZB'; sitetype{ii} = 'P';
 jj = jj+1; fil{ii,jj} = [dir0, 'PZ-Bank_161005_Calib20161002_1245_results.mat'];
 
 % ii = ii+1; jj = 0; sitename{ii} = 'PZ-E'; sitetype{ii} = 'P';
 % jj = jj+1; fil{ii,jj} = [dir0, 'PZ-E_161005_Calib20161001_1400_results.mat'];
-% 
+
 ii = ii+1; jj = 0; sitename{ii} = 'PZI'; sitetype{ii} = 'P';
 jj = jj+1; fil{ii,jj} = [dir0, 'PZ-In_161005_Calib20161001_1300_results.mat'];
 
@@ -90,13 +90,13 @@ jj = jj+1; fil{ii,jj} = [dir0, 'PZ-In_161005_Calib20161001_1300_results.mat'];
 % 
 % ii = ii+1; jj = 0; sitename{ii} = 'PZCC'; sitetype{ii} = 'P';
 % jj = jj+1; fil{ii,jj} = [dir0, 'PZ-CC_161005_Calib20161001_1300_results.mat'];
-%  
-% ii = ii+1; jj = 0; sitename{ii} = 'PZCE'; sitetype{ii} = 'P';
-% jj = jj+1; fil{ii,jj} = [dir0, 'PZ-CE_161005_Calib20160531_0930_results.mat'];
+ 
+ii = ii+1; jj = 0; sitename{ii} = 'PZCE'; sitetype{ii} = 'P';
+jj = jj+1; fil{ii,jj} = [dir0, 'PZ-CE_161005_Calib20160531_0930_results.mat'];
 %  
 % ii = ii+1; jj = 0; sitename{ii} = 'PZCW'; sitetype{ii} = 'P';
 % jj = jj+1; fil{ii,jj} = [dir0, 'PZ-CW_161005_Calib20161001_1400_results.mat'];
-%  
+% %  
 %  ii = ii+1; jj = 0; sitename{ii} = 'E1'; sitetype{ii} = 'G';
 % jj = jj+1; fil{ii,jj} = [dir0, 'E1_160530_Calib20160530_1930_results.mat'];
 % 
@@ -135,7 +135,7 @@ cmap = hsv(length(a));
 
 % colors for presentations
 clr_str1 = {'b'};
-clr_str2 = {[0 0 1], 'm', 'k', 'y',0,0,0};
+clr_str2 = {'k', 'm', 'c', 'y',0,0,0};
 clr_str3 = {'r', 'm', 'g', 'k', 'c'};
 
 clr_str4 = {0, 0, 0, 0,'c','g','r'};
@@ -312,7 +312,7 @@ precip_cm=precip_in*2.54;
 
 ind_miss = find(precip_TF_miss);
 subplot(3,1,3);
-plot(datenum_v, precip_cm), hold on
+plot(datenum_v, precip_cm, 'LineWidth',2), hold on
 
 plot(datenum_v(ind_miss), zeros(length(ind_miss), 1), 'xr'), 
 %title('Daily precip (in)');
@@ -336,5 +336,5 @@ grid on
 % set(gca, 'YLim', YLimv2);
 % vertical ref lines when rain
 
-
+print('-dsvg', 'CW+CE+SG.svg')
 print('-dtiff', figname);
