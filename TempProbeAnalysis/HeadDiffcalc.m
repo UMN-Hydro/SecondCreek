@@ -5,11 +5,11 @@ clear all
 close all
 format long g
 %import necessary files
-PZCC1 = load( 'C:\SecondCreekGit\Scripts\PZ-CC_161005_Calib20161001_1300_results.mat');
-PZCC2 = load( 'C:\SecondCreekGit\Scripts\PZ-CC_161005_Calib20161001_1300_results.mat');
+PZCC1 = load( 'C:\SecondCreekGit\Scripts\PZ-Out_161005_Calib20161001_1545_results.mat');
+PZCC2 = load( 'C:\SecondCreekGit\Scripts\PZ-Out_161005_Calib20161001_1545_results.mat');
 
 SG11 = load('C:\SecondCreekGit\Scripts\SG-1_1st_Position_161005_Calib20160531_0945_results.mat');
-SG12 = load('C:\SecondCreekGit\Scripts\SG-1_2nd_Position_161005_Calib20161001_1430_results.mat');
+SG12 = load('C:\SecondCreekGit\Scripts\SG-1 2nd Position_161005_Calib20161001_1430_resultsOLD.mat');
 
 %extract date data
 dateSG11 = datenum(SG11.DivDateTime);
@@ -59,7 +59,7 @@ headDiff1 = PZCC1adjustedH-SG11adjustedH;
  %fileID = 'TPA_headDiff1_1DTempPro.csv';
 
  
-fileID = fopen('C:\SecondCreekGit\TempProbeAnalysis\HeadDiff1_1DTempPro.csv','w');
+fileID = fopen('C:\SecondCreekGit\TempProbeAnalysis\HeadDiff1_PZOSG.csv','w');
  [nrows, ncols] = size(SG11adjustedH) ;
 
 
@@ -115,7 +115,7 @@ headDiff2 = PZCC2adjustedH-SG12adjustedH;
 
 
 
- fileID = fopen('C:\SecondCreekGit\TempProbeAnalysis\HeadDiff2_1DTempPro.csv','w');
+ fileID = fopen('C:\SecondCreekGit\TempProbeAnalysis\HeadDiff2_PZOSG.csv','w');
 
 [nSG11, ncols] =  size(SG11adjustedH);
 [nSG12, col] = size(SG12adjustedH);
