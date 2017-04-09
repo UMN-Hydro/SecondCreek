@@ -227,7 +227,7 @@ for row = 1:nrows
         elseif col == 1
             fprintf(fileID,'%f\r\n',TP_A_meanCAL(row,col));
         else
-            fprintf(fileID,'%f%s',TP_A_meanCAL(row,col-1),', ');
+            fprintf(fileID,'%f%s',TP_A_meanCAL(row,col),', ');
         end
     end
 end
@@ -244,7 +244,7 @@ for row = 1:nrows
         elseif col == 1
             fprintf(fileID,'%f\r\n',TP_B_meanCAL(row,col));
         else
-            fprintf(fileID,'%f%s',TP_B_meanCAL(row,col-1),', ');
+            fprintf(fileID,'%f%s',TP_B_meanCAL(row,col),', ');
         end
     end
 end
@@ -261,7 +261,7 @@ for row = 1:nrows
         elseif col == 1
             fprintf(fileID,'%f\r\n',TP_C_meanCAL(row,col));
         else
-            fprintf(fileID,'%f%s',TP_C_meanCAL(row,col-1),', ');
+            fprintf(fileID,'%f%s',TP_C_meanCAL(row,col),', ');
         end
     end
 end
