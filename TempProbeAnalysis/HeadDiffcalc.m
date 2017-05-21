@@ -65,7 +65,7 @@ fileID = fopen('C:\SecondCreekGit\TempProbeAnalysis\HeadDiff1_PZCWSG.csv','w');
 
 for row = 1:nrows
    
-   fprintf(fileID, '%s%s%f\r\n', SG11adjustedT{row,1} , ', ', headDiff1(row,1));
+   fprintf(fileID, '%s%s%f\r\n', SG11adjustedT{row,1} , ', ', -1*headDiff1(row,1));
 end
 
 %repeat for second chunk of summer

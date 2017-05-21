@@ -840,7 +840,7 @@ datetick('x', 6);
 ind_end = find(strcmp(ManualDate, DivDate) & strcmp(ManualTime, DivTime));
 DiverDepth = PVC_DepthToWater + DivPress_compensated(ind_end);
 %DiverElev = PVC_Elev - DiverDepth; % cm
-
+print DiverDepth
 
 % general filename
 a  = ManualDate([1:4, 6:7, 9:10]);
