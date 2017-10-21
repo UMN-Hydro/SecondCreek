@@ -1,1 +1,1 @@
-C:\SecondCreekGit\DATA\Temp_data\Archive
+C:/SecondCreekGit/DATA/Temp_data/Archive/*

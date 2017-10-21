@@ -1,0 +1,4 @@
+10/19
+-Reorganized SecondCreekGit repo
+- attempted to commit (success or no?)
+-2 hrs
