@@ -42,7 +42,7 @@ clear all, close all, fclose all;
  %DivLabel = 'PZ-Out';
 % DivLabel = 'PZ-Bank';
  %DivLabel = 'PZ-CW'; %added summer 2016
-DivLabel = 'PZ-CC'; %added summer 2016
+%DivLabel = 'PZ-CC'; %added summer 2016
 %  DivLabel = 'PZ-CE'; %added summer 2016
 % DivLabel = 'PZ-E';
 % DivLabel = 'A2';
@@ -50,7 +50,7 @@ DivLabel = 'PZ-CC'; %added summer 2016
 % DivLabel = 'C1';
 % DivLabel = 'D1';
 % DivLabel = 'E1';
-%DivLabel = 'SG-1_1st_Position';
+DivLabel = 'SG-1_1st_Position';
 %  DivLabel = 'SG-1_2nd_Position';
 
 % =========================
@@ -609,14 +609,14 @@ if strcmp(date_label, '161005')
     if strcmp(DivLabel, 'SG-1_1st_Position')  %split dis up, moved on august first
        
         PVC_Elev = 429.092 * 100; % m -> cm [total station transit 10/01/16]
-        SCDiver_fil = 'C:\SecondCreekGit\2016_data\2016_10_02\CSV_edit\sg1_4_161005161403_H2366FirstPlacement.csv'; 
+        SCDiver_fil = 'C:\SecondCreekGit\DATA\2016_head_data\2016_10_02\CSV_edit\sg1_4_161005161403_H2366FirstPlacement.csv'; 
 %         ManualDate = '2015/06/25'; ManualTime = '16:30:00'; PVC_DepthToWater = 75; % cm
 %         ManualDate = '2015/07/10'; ManualTime = '09:30:00'; PVC_DepthToWater = 88.7; % cm
         ManualDate = '2016/05/31'; ManualTime = '09:45:00'; PVC_DepthToWater = 62.4; % cm 
         Div_Int_Min = 15; % time interval in min
         DivStartDate = '2016/05/31'; DivStartTime = '09:45:00';  % nan: use top of file
         DivEndDate = '2016/07/25'; DivEndTime = '17:00:00';  % nan: use end of file
-     %   DiverElev =  428.137330 * 100;
+        DiverElev =  428.137330 * 100;
 
     elseif strcmp(DivLabel, 'SG-1_2nd_Position')  %split dis up, moved on august first
        
@@ -656,7 +656,6 @@ if strcmp(date_label, '161005')
     elseif strcmp(DivLabel, 'PZ-Bank')
         PVC_Elev = 429.336 * 100; % m -> cm [total station transit 10/02/16]
         SCDiver_fil = 'C:\SecondCreekGit\2016_data\2016_10_02\CSV_edit\pzb_5_161005162131_J3507.CSV';
-       % ManualDate = '2016/05/31'; ManualTime = '11:15:00'; PVC_DepthToWater = 36.8; % cm (DO NOT TRUST BC FLOODED AND BUBBLES WHEN CAP REMOVED)  
 
         ManualDate = '2016/10/02'; ManualTime = '12:45:00'; PVC_DepthToWater = 30.6; % cm
         Div_Int_Min = 15; % time interval in min
@@ -666,7 +665,6 @@ if strcmp(date_label, '161005')
     elseif strcmp(DivLabel, 'PZ-E')
         PVC_Elev = 429.538 * 100; % m -> cm [total station transit 10/02/16]
         SCDiver_fil = 'C:\SecondCreekGit\2016_data\2016_10_02\CSV_edit\pze_7_161005155935_M9447.CSV';
-   %     ManualDate = '2016/05/31'; ManualTime = '09:00:00'; PVC_DepthToWater = 100.9; % cm (DO NOT TRUST BC FLOODED AND BUBBLES WHEN CAP REMOVED)  
 
         ManualDate = '2016/10/01'; ManualTime = '14:00:00'; PVC_DepthToWater = 65; % cm
         Div_Int_Min = 10; % time interval in min
@@ -676,7 +674,6 @@ if strcmp(date_label, '161005')
     elseif strcmp(DivLabel, 'PZ-CW')
         PVC_Elev = 429.212 * 100; % m -> cm [total station transit 10/01/16 and 10/02/16]
         SCDiver_fil = 'C:\SecondCreekGit\2016_data\2016_10_02\CSV_edit\pzcw_8_161005160252_M9440.CSV';
-       %  ManualDate = '2016/05/31'; ManualTime = '09:15:00'; PVC_DepthToWater = 6.2; % cm (DO NOT TRUST BC FLOODED AND BUBBLES WHEN CAP REMOVED)  
 
         ManualDate = '2016/10/01'; ManualTime = '14:00:00'; PVC_DepthToWater = 33.6; % cm
         Div_Int_Min = 15; % time interval in min
@@ -686,7 +683,6 @@ if strcmp(date_label, '161005')
     elseif strcmp(DivLabel, 'PZ-CC')
         PVC_Elev = 429.558 * 100; % m -> cm [total station transit averaged 10/01/16 and 10/02/16]
         SCDiver_fil = 'C:\SecondCreekGit\2016_data\2016_10_02\CSV_edit\pzcc_3_161005155030_M9438.CSV';
-      %  ManualDate = '2016/05/31'; ManualTime = '09:15:00'; PVC_DepthToWater = 103.3; % cm (DO NOT TRUST BC FLOODED AND BUBBLES WHEN CAP REMOVED)  
 
         ManualDate = '2016/10/01'; ManualTime = '13:00:00'; PVC_DepthToWater = 68.1; % cm
         Div_Int_Min = 15; % time interval in min
@@ -696,7 +692,6 @@ if strcmp(date_label, '161005')
     elseif strcmp(DivLabel, 'PZ-CE')
         PVC_Elev = 429.342 * 100; % m -> cm [total station transit averaged 10/01/16 and 10/02/16]
         SCDiver_fil = 'C:\SecondCreekGit\2016_data\2016_10_02\CSV_edit\pzce_2_161005155637_M9506.CSV';
-    %      ManualDate = '2016/05/31'; ManualTime = '09:30:00'; PVC_DepthToWater = 82.4; % cm (DO NOT TRUST BC FLOODED AND BUBBLES WHEN CAP REMOVED)  
 
        ManualDate = '2016/10/01'; ManualTime = '14:15:00'; PVC_DepthToWater = 49.4; % cm
         Div_Int_Min = 15; % time interval in min

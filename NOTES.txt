@@ -1,4 +1,15 @@
 10/19
 -Reorganized SecondCreekGit repo
-- attempted to commit (success or no?)
+- attempted to commit (fail)
 -2 hrs
+
+10/21 
+- updated second creek git repo by removing larg efiles with filter-branch
+- 1 hr
+
+10/24
+-found depth to stream, casing length for PZ. Put them into python file
+- Trying to sort out confusion with DiverElev in SCDiver_calc. There is a line in the script where DiverElev is calculated, but there are also
+ spots where it is manally inputted. I beilive the manual inputs should override the calculation where the manual input is available. Where
+did I get the values for the manual inputs? And were the head ts for each 2016 PZ calculated using the correct diver depth (ie manual input, not calc)
+

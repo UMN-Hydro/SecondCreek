@@ -3,7 +3,18 @@ import numpy as np
 import pandas as pd
 from matplotlib import pyplot as plt
 
+PZCCstickup = 154.94 #distance from PZCC TOC to streambed, cm
+PZCClength = 182.88 #length of PZCC casing, cm
+dsCC = PZCClength - PZCCstickup
 
+PZCWstickup = 140.97 #distance from PZCW TOC to streambed, cm
+PZCWlength = 182.88 #length of PZCW casing, cm
+dsCW = PZCWlength - PZCWstickup
+
+
+
+PZCIstickup = 0.0 #distance from PZCC TOC to streambed, cm
+PZCIlength = 0.0 #length of PZCC casing, cm
 
 #Script to take average q output from 1DTempProbePro and a deltaH time series to calculate average K. Additionally
 #it scales the delta H data to 0.3 meters, (the distance between the top and bottom temperature probes) for future use with 1DTempPro.
