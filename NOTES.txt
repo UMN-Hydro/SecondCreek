@@ -15,4 +15,10 @@ did I get the values for the manual inputs? And were the head ts for each 2016 P
 
 10/25
 - I believe that the head difference TS for PZCC and SG-1 was calculated using the appropriate PZ elevation information
-- JUST KIDDING the head difference doesnt make any sense- the second half of the summer is much maller
+- JUST KIDDING the head difference doesnt make any sense- the second half of the summer is much maller. I suspect that there is something
+ wrong with the SG surveyed elevation... such an normous change in head at the JULY discontinuitty
+- deciding to restrict analysis to the first half of summer until a procedure is developed, then address the sg discrepancy
+- head differenc is applied to top and bottom sensors - this needs to be scaled. 
+- scaled head diff
+-1d temp pro gives error on 3rd iteration: could the parameters be physically unrealistic???
+- attempt to isolate error by running model withgeneric sediment parameters -still gives an error. I wonder If I have a sign wrong in the head difference?I guess the head difference calculations need to be checked again.

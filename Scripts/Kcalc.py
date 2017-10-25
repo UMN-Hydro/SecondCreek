@@ -70,8 +70,8 @@ print 'k1 = %f' % (k1)
 print 'k2 = %f' %(k2)
 
 #scale dh to .3 meters for 1dtemppro. Also make it negative to indicate higher head in the stream bed
-dh1['deltah'] = dh1['deltah'] * -.3/dsCC
-dh2['deltah'] = dh2['deltah'] * -.3/dsCC 
+dh1['deltah'] = dh1['deltah'] * .3/dsCC
+dh2['deltah'] = dh2['deltah'] * .3/dsCC 
 
 #Save head data as a csv suitable for 1dtempProbePro. This requires reloading the
 #csv as a numpy array so that the delimiter can be ', '. Pandas doesn't support multi
