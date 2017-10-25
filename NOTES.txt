@@ -1,11 +1,11 @@
 10/19
 -Reorganized SecondCreekGit repo
 - attempted to commit (fail)
--2 hrs
+
 
 10/21 
 - updated second creek git repo by removing larg efiles with filter-branch
-- 1 hr
+
 
 10/24
 -found depth to stream, casing length for PZ. Put them into python file
@@ -13,3 +13,6 @@
  spots where it is manally inputted. I beilive the manual inputs should override the calculation where the manual input is available. Where
 did I get the values for the manual inputs? And were the head ts for each 2016 PZ calculated using the correct diver depth (ie manual input, not calc)
 
+10/25
+- I believe that the head difference TS for PZCC and SG-1 was calculated using the appropriate PZ elevation information
+- JUST KIDDING the head difference doesnt make any sense- the second half of the summer is much maller
