@@ -22,3 +22,6 @@ did I get the values for the manual inputs? And were the head ts for each 2016 P
 - scaled head diff
 -1d temp pro gives error on 3rd iteration: could the parameters be physically unrealistic???
 - attempt to isolate error by running model withgeneric sediment parameters -still gives an error. I wonder If I have a sign wrong in the head difference?I guess the head difference calculations need to be checked again.
+
+10/25
+make sure github worked
