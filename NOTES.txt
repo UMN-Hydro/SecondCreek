@@ -25,3 +25,6 @@ did I get the values for the manual inputs? And were the head ts for each 2016 P
 
 10/25
 make sure github worked
+10/30
+-In the past few days: Github issue with commited archive files was resolved
+- couldnt get a meaningful resuplt from 1d temp b/c I forgot to multiply the head difference by a factor of -1. The program was throwing several errors.

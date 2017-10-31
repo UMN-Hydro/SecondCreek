@@ -23,7 +23,6 @@ dsCC = PZCClength - PZCCstickup #distance from streambed to screened interval
 #Variables names ending in 2 indicate that they are the end of summer, aug 1 - october
     
 
-q= -0.040889 #modeled average flux from 1dtempro
 
 
 
@@ -47,31 +46,12 @@ dh1 = dh1.set_index(['date'])
 dh2['date']= pd.to_datetime(dh2['date'], format= '%m/%d/%Y %H:%M')
 dh2 = dh2.set_index(['date'])
 
-plt.plot(dh1)
-plt.plot(dh2, color ='b')
-plt.xlabel('Date')
-plt.ylabel('Head difference, m')
-plt.title('Head difference, PZCC-SG')
-plt.show()
 
 
-#calculate k/ds from q = dh* k/ ds 
-# then convert k/ds to k that will be used by 1d temp pro
-
-#Darcy's law to calculade k/ds
-k1overds= -dh1['deltah'].mean() / q
-k2overds= -dh2['deltah'].mean() / q
-
-#calculate hydraulic conductivity
-k1= k1overds *dsCC
-k2= k2overds *dsCC
-
-print 'k1 = %f' % (k1)
-print 'k2 = %f' %(k2)
 
 #scale dh to .3 meters for 1dtemppro. Also make it negative to indicate higher head in the stream bed
-dh1['deltah'] = dh1['deltah'] * .3/dsCC
-dh2['deltah'] = dh2['deltah'] * .3/dsCC 
+dh1['deltah'] = dh1['deltah'] * -.3/dsCC
+dh2['deltah'] = dh2['deltah'] *- .3/dsCC 
 
 #Save head data as a csv suitable for 1dtempProbePro. This requires reloading the
 #csv as a numpy array so that the delimiter can be ', '. Pandas doesn't support multi
@@ -87,7 +67,18 @@ np.savetxt('C:\\SecondCreekGit\\SCRIPT OUTPUTS\\HEAD DIFFERENCES\\Scaled using P
 
 
 
+K1 =  6.301
+K2 = 'NA'
+q = -1*dh1*K1/0.3
+plt.plot(q)
+#plt.plot(dh2, color ='b')
+
+plt.xlabel('Date')
+plt.ylabel('q, m/d, positive is upwards ')
+plt.title('q TPB')
+plt.savefig("C:\\SecondCreekGit\\SCRIPT OUTPUTS\\q Time series plots\\TPB_q_TS.png")
+q.to_csv('C:\\SecondCreekGit\\SCRIPT OUTPUTS\\q Time series plots\\TPB_q_TS.csv', sep = ',', date_format='%m/%d/%Y %H:%M', header = False)
+plt.show()
 
 
-
-
+print np.mean(-1*dh1['deltah']*K1/0.3)
