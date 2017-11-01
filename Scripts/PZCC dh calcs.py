@@ -67,17 +67,27 @@ np.savetxt('C:\\SecondCreekGit\\SCRIPT OUTPUTS\\HEAD DIFFERENCES\\Scaled using P
 
 
 
-K1 =  0.76921
+K1 =  6.3021
 K2 = 'NA'
 q = -1*dh1*K1/0.3
-plt.plot(q)
-#plt.plot(dh2, color ='b')
+q['mean'] = np.mean(q['deltah'])
+plt.locator_params(numticks = 4)
 
+
+fig = plt.figure()
+ax = fig.add_subplot(111)
+
+
+f.plot(q['deltah'])
+ax.plot(q['mean'])
+#plt.plot(dh2, color ='b')
 plt.xlabel('Date')
 plt.ylabel('q, m/d, positive is upwards ')
 plt.title('q TPB')
 plt.savefig("C:\\SecondCreekGit\\SCRIPT OUTPUTS\\q Time series plots\\TPB_q_TS.png")
 q.to_csv('C:\\SecondCreekGit\\SCRIPT OUTPUTS\\q Time series plots\\TPB_q_TS.csv', sep = ',', date_format='%m/%d/%Y %H:%M', header = False)
+
+
 plt.show()
 
 

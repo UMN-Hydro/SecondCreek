@@ -1,11 +1,26 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Tue Oct 31 12:14:57 2017
+
+@author: Jack
+"""
+
 
 import numpy as np
 import pandas as pd
 from matplotlib import pyplot as plt
 
+
+PZIelev =429.098 
+PZCCelev = 429.548
+
+
 PZCCstickup = 154.94 #distance from PZCC TOC to streambed, cm
+PZIstickup = PZCCstickup - (PZCCelev - PZIelev)
+
 PZCClength = 182.88 #length of PZCC casing, cm
-dsCC = PZCClength - PZCCstickup #distance from streambed to screened interval
+PZIlength = 0.762 
+dsI = PZIlength - PZIstickup #distance from streambed to screened interval
 
 #PZCWstickup = 140.97 #distance from PZCW TOC to streambed, cm
 #PZCWlength = 182.88 #length of PZCW casing, cm
@@ -28,8 +43,8 @@ dsCC = PZCClength - PZCCstickup #distance from streambed to screened interval
 
 #read in head difference timeseries. These time series were calculated from the PZdata dependent on the measured depths fro OCTOBER
 
-dh1 =pd.read_csv('C:\\SecondCreekGit\\SCRIPT OUTPUTS\\HEAD DIFFERENCES\\HeadDiff1_PZCCSG.csv', sep= ',', header = None ) #first half of summer
-dh2= pd.read_csv('C:\\SecondCreekGit\\SCRIPT OUTPUTS\\HEAD DIFFERENCES\\HeadDiff2_PZCCSG.csv', sep= ',', header = None ) #second half of summer
+dh1 =pd.read_csv('C:\\SecondCreekGit\\SCRIPT OUTPUTS\\HEAD DIFFERENCES\\HeadDiff1_PZinSG.csv', sep= ',', header = None ) #first half of summer
+dh2= pd.read_csv('C:\\SecondCreekGit\\SCRIPT OUTPUTS\\HEAD DIFFERENCES\\HeadDiff2_PZinSG.csv', sep= ',', header = None ) #second half of summer
 
 #rename colums for ease of use
 
@@ -50,8 +65,8 @@ dh2 = dh2.set_index(['date'])
 
 
 #scale dh to .3 meters for 1dtemppro. Also make it negative to indicate higher head in the stream bed
-dh1['deltah'] = dh1['deltah'] * -.3/dsCC
-dh2['deltah'] = dh2['deltah'] *- .3/dsCC 
+dh1['deltah'] = dh1['deltah'] * .3/dsI
+dh2['deltah'] = dh2['deltah'] *.3/dsI 
 
 #Save head data as a csv suitable for 1dtempProbePro. This requires reloading the
 #csv as a numpy array so that the delimiter can be ', '. Pandas doesn't support multi
@@ -60,14 +75,14 @@ dh1.to_csv('C:\\SecondCreekGit\\SCRIPT OUTPUTS\\HEAD DIFFERENCES\\Scaled using P
 dh2.to_csv('C:\\SecondCreekGit\\SCRIPT OUTPUTS\\HEAD DIFFERENCES\\Scaled using PZStickup\\scaleddh2.csv',sep =',',date_format='%m/%d/%Y %H:%M', header = False)
 dh1temp = np.loadtxt('C:\\SecondCreekGit\\SCRIPT OUTPUTS\\HEAD DIFFERENCES\\Scaled using PZStickup\\scaleddh1.csv', dtype =str , delimiter = ',')
 dh2temp = np.loadtxt('C:\\SecondCreekGit\\SCRIPT OUTPUTS\\HEAD DIFFERENCES\\Scaled using PZStickup\\scaleddh2.csv', dtype =str, delimiter = ',')
-np.savetxt('C:\\SecondCreekGit\\SCRIPT OUTPUTS\\HEAD DIFFERENCES\\Scaled using PZStickup\\scaleddh1CC.csv',dh1temp,fmt= '%s', delimiter = ', ')
-np.savetxt('C:\\SecondCreekGit\\SCRIPT OUTPUTS\\HEAD DIFFERENCES\\Scaled using PZStickup\\scaleddh2CC.csv',dh2temp,fmt = '%s', delimiter = ', ')
+np.savetxt('C:\\SecondCreekGit\\SCRIPT OUTPUTS\\HEAD DIFFERENCES\\Scaled using PZStickup\\scaleddh1I.csv',dh1temp,fmt= '%s', delimiter = ', ')
+np.savetxt('C:\\SecondCreekGit\\SCRIPT OUTPUTS\\HEAD DIFFERENCES\\Scaled using PZStickup\\scaleddh2I.csv',dh2temp,fmt = '%s', delimiter = ', ')
 #
 
 
 
 
-K1 =  0.76921
+K1 = 4.0351
 K2 = 'NA'
 q = -1*dh1*K1/0.3
 plt.plot(q)
@@ -76,9 +91,9 @@ plt.plot(q)
 plt.xlabel('Date')
 plt.ylabel('q, m/d, positive is upwards ')
 plt.title('q TPB')
-plt.savefig("C:\\SecondCreekGit\\SCRIPT OUTPUTS\\q Time series plots\\TPB_q_TS.png")
-q.to_csv('C:\\SecondCreekGit\\SCRIPT OUTPUTS\\q Time series plots\\TPB_q_TS.csv', sep = ',', date_format='%m/%d/%Y %H:%M', header = False)
+plt.savefig("C:\\SecondCreekGit\\SCRIPT OUTPUTS\\q Time series plots\\TPA_q_TS.png")
+q.to_csv('C:\\SecondCreekGit\\SCRIPT OUTPUTS\\q Time series plots\\TPA_q_TS.csv', sep = ',', date_format='%m/%d/%Y %H:%M', header = False)
 plt.show()
 
-
+#
 print np.mean(-1*dh1['deltah']*K1/0.3)

@@ -28,3 +28,8 @@ make sure github worked
 10/30
 -In the past few days: Github issue with commited archive files was resolved
 - couldnt get a meaningful resuplt from 1d temp b/c I forgot to multiply the head difference by a factor of -1. The program was throwing several errors.
+
+10/31
+-Ran 1d temp using PZCC head data. TPA is still an outlier, with K an order of magnitue smaller that B and C. Re running TPA using the PZI head difference instead. Stay tuned:
+- still only considering summer up to aug 1. I wonder what happens if entire summer considered!?
+- should sg1 be used to calc dh for PZI? PZI isnt in the stream...?
