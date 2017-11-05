@@ -33,3 +33,18 @@ make sure github worked
 -Ran 1d temp using PZCC head data. TPA is still an outlier, with K an order of magnitue smaller that B and C. Re running TPA using the PZI head difference instead. Stay tuned:
 - still only considering summer up to aug 1. I wonder what happens if entire summer considered!?
 - should sg1 be used to calc dh for PZI? PZI isnt in the stream...?
+
+11/4
+- to do:
+	-rerun temp probe for second half of summer
+	- qantify how results for K correspond with results for average q
+	- document how each dh time series was calculated
+	- check location of each TP with amandas notes
+
+Issues:
+	-There isnt temperature data past 8/1/16 for TPB and TPC. I checked both google drives.
+Point of intrest:
+	-There is one brief head inversion in the second half of the summer aproc 8/29
+		
+TEMP PRO results 
+	 -K slightly larger for second half of summer using TPA (Makes sense because dh/ds is smaller in the second half

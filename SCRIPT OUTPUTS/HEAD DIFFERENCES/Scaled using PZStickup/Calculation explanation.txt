@@ -1,0 +1,3 @@
+Column 1 = date
+
+Column 2 = (Head PZ - Head SG)/(PZlength - PZStickup) * -0.3

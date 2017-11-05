@@ -45,10 +45,10 @@ ntherm = 6 ; %number thermisters/probe
 %     SCTempProbeC_fil = 'C:\SecondCreekGit\TempProbeAnalysis\TempProbeRawData_2016\2016_08_01_download\Logger_C_20160801.txt' ;
 %     SCCal_fil = 'C:\SecondCreekGit\TempProbeAnalysis\TempProbe\TempProbCalAvg_2016.dat' ;
 %     
-       SCTempProbeA_fil = 'C:\SecondCreekGit\TempProbeAnalysis\TempProbeRawData_2016\2016_10_04_download\Logger_A_20160410.txt' ;
-    SCTempProbeB_fil = 'C:\SecondCreekGit\TempProbeAnalysis\TempProbeRawData_2016\2016_10_04_download\Logger_B.txt' ;
-    SCTempProbeC_fil = 'C:\SecondCreekGit\TempProbeAnalysis\TempProbeRawData_2016\2016_08_01_download\Logger_C_20160801.txt' ;
-    SCCal_fil = 'C:\SecondCreekGit\TempProbeAnalysis\TempProbe\TempProbCalAvg_2016.dat' ;
+       SCTempProbeA_fil = 'C:\SecondCreekGit\DATA\TempProbeRawData_2016\2016_10_04_download\Logger_A_20160410.txt' ;
+    SCTempProbeB_fil = 'C:\SecondCreekGit\DATA\TempProbeRawData_2016\2016_10_04_download\Logger_B.txt' ;
+    SCTempProbeC_fil = 'C:\SecondCreekGit\DATA\TempProbeRawData_2016\2016_08_01_download\Logger_C_20160801.txt' ;
+    SCCal_fil = 'C:\SecondCreekGit\DATA\TempProbeRawData_2016\CalibrationFiles\TempProbCalAvg_2016.dat' ;
     
     %read csv file
     TP_A = csvread(SCTempProbeA_fil);
@@ -217,7 +217,7 @@ TableTemp_B= table(TempProTimeB);
 TableTemp_C= table(TempProTimeC);
 
 
-fileID = fopen('TPA_CalibData_1DTempPro.csv','w');
+fileID = fopen('FULL SUMMER TPA_CalibData_1DTempPro.csv','w');
 [nrows,ncols] = size(TP_A_meanCAL);
 fprintf(fileID, '%s\r\n',', 0, 0.05, 0.1, 0.15, 0.2, 0.3');
 for row = 1:nrows
@@ -234,7 +234,7 @@ end
 
 
 
-fileID = fopen('TPB_CalibData_1DTempPro.csv','w');
+fileID = fopen('FULL SUMMER TPB_CalibData_1DTempPro.csv','w');
 [nrows,ncols] = size(TP_B_meanCAL);
 fprintf(fileID, '%s\r\n',', 0, 0.05, 0.1, 0.15, 0.2, 0.3');
 for row = 1:nrows
@@ -251,7 +251,7 @@ end
 
 
 
-fileID = fopen('TPC_CalibData_1DTempPro.csv','w');
+fileID = fopen('FULL SUMMER TPC_CalibData_1DTempPro.csv','w');
 [nrows,ncols] = size(TP_C_meanCAL);
 fprintf(fileID, '%s\r\n',', 0, 0.05, 0.1, 0.15, 0.2, 0.3');
 for row = 1:nrows
