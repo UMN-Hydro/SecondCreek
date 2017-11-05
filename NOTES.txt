@@ -40,7 +40,7 @@ make sure github worked
 	- qantify how results for K correspond with results for average q
 	- document how each dh time series was calculated
 	- check location of each TP with amandas notes
-
+	- BACK CALCULATE DS FOR FIRST HALF OF SUMMER FROM SECND HALF RESULTS
 Issues:
 	-There isnt temperature data past 8/1/16 for TPB and TPC. I checked both google drives.
 Point of intrest:
