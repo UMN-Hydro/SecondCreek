@@ -1,3 +1,7 @@
 Column 1 = date
 
 Column 2 = (Head PZ - Head SG)/(PZlength - PZStickup) * -0.3
+
+ PZIstickup was = PZCCstickup - (PZCCelev - PZIelev), and PZCW was calculated in the same fashion (replazinc PZIelev with PZCWelev)
+
+Units are detailed in the script where this calculation takes place (PZI dh clacs.py, PZCW dh calc.py, PZCC dh calcs.py

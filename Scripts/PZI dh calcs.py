@@ -19,7 +19,7 @@ PZCCstickup = 154.94 #distance from PZCC TOC to streambed, cm
 PZIstickup = PZCCstickup - (PZCCelev - PZIelev)*100 #cm
 
 PZIlength = 076.2 #cm
-dsI = (PZIlength - PZIstickup)*100 #distance from streambed to screened interval in meters
+dsI = (PZIlength - PZIstickup)/100 #distance from streambed to screened interval in meters
 
 
     
@@ -57,6 +57,8 @@ dh2I['deltah'] = dh2I['deltah'] *.3/dsI
 #Save head data as a csv suitable for 1dtempProbePro. This requires reloading the
 #csv as a numpy array so that the delimiter can be ', '. Pandas doesn't support multi
 #character delimiters.
+
+#Output  units are meters
 dh1I.to_csv('C:\\SecondCreekGit\\SCRIPT OUTPUTS\\HEAD DIFFERENCES\\Scaled using PZStickup\\scaleddh1I.csv',sep =',',date_format='%m/%d/%Y %H:%M', header = False)
 dh2I.to_csv('C:\\SecondCreekGit\\SCRIPT OUTPUTS\\HEAD DIFFERENCES\\Scaled using PZStickup\\scaleddh2I.csv',sep =',',date_format='%m/%d/%Y %H:%M', header = False)
 dh1temp = np.loadtxt('C:\\SecondCreekGit\\SCRIPT OUTPUTS\\HEAD DIFFERENCES\\Scaled using PZStickup\\scaleddh1I.csv', dtype =str , delimiter = ',')

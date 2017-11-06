@@ -1,3 +1,6 @@
+%Outputs head difference in CM
+
+
 %CHANGES 1/31/17
 % Updated file paths for 2015 and 2016 sections
 % SCDiver_calc3.m 

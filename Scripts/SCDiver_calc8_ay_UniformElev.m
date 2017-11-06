@@ -1,3 +1,5 @@
+%Outputs head difference in cm
+
 % SCDiver_calc7.m 
 %
 % This script does the folloing:

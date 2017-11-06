@@ -10,8 +10,8 @@ import pandas as pd
 # Use K from the second half of summer, know "average q" for first half, know dh for first half, calculate ds. find mean ds, std deviation to quantify the error
 
 
-K =  #meters/day
-q = -0.0037182 #meters/day
+K = 0.011842 #meters/day
+q = --0.0037182#meters/day
 
 dh1 =pd.read_csv('C:\\SecondCreekGit\\SCRIPT OUTPUTS\\HEAD DIFFERENCES\\HeadDiff1_PZCWSG.csv', sep= ',', header = None ) #first half of summer, meters
 dh1.rename(columns={0: 'date', 1: 'deltah'}, inplace = True)

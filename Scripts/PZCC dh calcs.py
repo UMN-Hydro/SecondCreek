@@ -56,6 +56,9 @@ dh2CC['deltah'] = dh2CC['deltah'] *- .3/dsCC
 #Save head data as a csv suitable for 1dtempProbePro. This requires reloading the
 #csv as a numpy array so that the delimiter can be ', '. Pandas doesn't support multi
 #character delimiters.
+
+#Output  units are meters
+
 dh1CC.to_csv('C:\\SecondCreekGit\\SCRIPT OUTPUTS\\HEAD DIFFERENCES\\Scaled using PZStickup\\scaleddh1CC.csv',sep =',',date_format='%m/%d/%Y %H:%M', header = False)
 dh2CC.to_csv('C:\\SecondCreekGit\\SCRIPT OUTPUTS\\HEAD DIFFERENCES\\Scaled using PZStickup\\scaleddh2CC.csv',sep =',',date_format='%m/%d/%Y %H:%M', header = False)
 dh1temp = np.loadtxt('C:\\SecondCreekGit\\SCRIPT OUTPUTS\\HEAD DIFFERENCES\\Scaled using PZStickup\\scaleddh1CC.csv', dtype =str , delimiter = ',')
