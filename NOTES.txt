@@ -48,3 +48,8 @@ Point of intrest:
 		
 TEMP PRO results 
 	 -K slightly larger for second half of summer using TPA (Makes sense because dh/ds is smaller in the second half
+
+11/6
+-Error  caught: PZI and PZCW length was in meters, not CM. All K values previously modeled dHCW and dhI from those TS should be thrown out.
+- Encountering confusion about all units. headdiff files have units meters (SCDiver gives units of cm, then converted to M in HeadDiffcalc)
+-There were unit errors in the calculations for all dh time series, all K modeling must be repeated. 
