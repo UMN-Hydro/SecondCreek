@@ -609,7 +609,7 @@ if strcmp(date_label, '161005')
 % date_label = '161005';
 
     DivEndDate = nan; DivEndTime = nan;  % nan: use end of file
-    if strcmp(DivLabel, 'SG-1_1st_Position')  %split dis up, moved on august first
+    if strcmp(DivLabel, 'SG-1_1st_Position_patricks calculated elevation')  %split dis up, moved on august first
        
         PVC_Elev = 429.092 * 100; % m -> cm [total station transit 10/01/16]
         SCDiver_fil = 'C:\SecondCreekGit\DATA\2016_head_data\2016_10_02\CSV_edit\sg1_4_161005161403_H2366FirstPlacement.csv'; 
@@ -619,7 +619,7 @@ if strcmp(date_label, '161005')
         Div_Int_Min = 15; % time interval in min
         DivStartDate = '2016/05/31'; DivStartTime = '09:45:00';  % nan: use top of file
         DivEndDate = '2016/07/25'; DivEndTime = '17:00:00';  % nan: use end of file
-        DiverElev =  428.137330 * 100;
+        DiverElev =  428.757 * 100;
 
     elseif strcmp(DivLabel, 'SG-1_2nd_Position')  %split dis up, moved on august first
        
