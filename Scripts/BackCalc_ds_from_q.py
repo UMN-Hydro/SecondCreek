@@ -13,7 +13,7 @@ from matplotlib import pyplot as plt
 
 
 
-PZCWelev =429.208 #meters
+PZCWelev =429.208 #metersa
 PZCCelev = 429.548 #meters
 
 
@@ -62,4 +62,4 @@ np.savetxt('C:\\SecondCreekGit\\SCRIPT OUTPUTS\\HEAD DIFFERENCES\\Scaled using P
 
 
 #calculate the amout that other dh series should be shifted before they are sacled for 1dtemp
-dhShift = shift * dsCWw
+dhShift = shift * dsCW
