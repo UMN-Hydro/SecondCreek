@@ -52,9 +52,6 @@ dh2CW['deltah'] = dh2CW['deltah'] *-.3/dsCW
 #csv as a numpy array so that the delimiter can be ', '. Pandas doesn't support multi
 #character delimiters.
 
-
-#Output  units are meters
-
 dh1CW.to_csv('C:\\SecondCreekGit\\SCRIPT OUTPUTS\\HEAD DIFFERENCES\\Scaled using PZStickup\\scaleddh1CW.csv',sep =',',date_format='%m/%d/%Y %H:%M', header = False)
 dh2CW.to_csv('C:\\SecondCreekGit\\SCRIPT OUTPUTS\\HEAD DIFFERENCES\\Scaled using PZStickup\\scaleddh2CW.csv',sep =',',date_format='%m/%d/%Y %H:%M', header = False)
 dh1temp = np.loadtxt('C:\\SecondCreekGit\\SCRIPT OUTPUTS\\HEAD DIFFERENCES\\Scaled using PZStickup\\scaleddh1CW.csv', dtype =str , delimiter = ',')
@@ -64,9 +61,30 @@ np.savetxt('C:\\SecondCreekGit\\SCRIPT OUTPUTS\\HEAD DIFFERENCES\\Scaled using P
 #
 #
 #
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#GARBAGE BELOW
+######
 #
 #
 #K1 = 4.0351
+
+
+
+
+
 #K2 = 'NA'
 #q = -1*dh1*K1/0.3
 #plt.plot(q)

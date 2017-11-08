@@ -14,7 +14,6 @@ from matplotlib import pyplot as plt
 
 
 PZCWelev =429.208 #meters
-
 PZCCelev = 429.548 #meters
 
 
@@ -25,9 +24,10 @@ PZCWlength = 182.88 #cm
 dsCW = (PZCWlength - PZCWstickup)/100 #distance from streambed to screened interval in meters
 
 
-K = 0.06056 #meters/day
-q = -0.0061557#meters/day, positive up
+K = 0.06056 #meters/day, from second half of summer using PZCW and TPA
+q = -0.0061557#meters/day, positive up from first half of summer, TPA
 
+#Read in and format head difference ts for PZCW
 dh1 =pd.read_csv('C:\\SecondCreekGit\\SCRIPT OUTPUTS\\HEAD DIFFERENCES\\HeadDiff1_PZCWSG.csv', sep= ',', header = None ) #first half of summer, meters
 dh1.rename(columns={0: 'date', 1: 'deltah'}, inplace = True)
 dh1['date']= pd.to_datetime(dh1['date'], format= '%m/%d/%Y %H:%M')
@@ -37,21 +37,29 @@ dh2.rename(columns={0: 'date', 1: 'deltah'}, inplace = True)
 dh2['date']= pd.to_datetime(dh2['date'], format= '%m/%d/%Y %H:%M')
 dh2['dh//ds'] = dh2['deltah']/dsCW
 
+
+#Calulate the expected average dh/ds for first half of summer
 AVGdhds  =  q/K
-#dsA =-K * dh1['deltah']/q
+
+#Calculate actual dh/ds for first half of summer
 dh1['dh//ds'] = dh1['deltah']/dsCW
+#find difference between actual and expected
 shift = np.mean(dh1['dh//ds']) +AVGdhds
+
+#shift actual by the difference with expected to correct for the incorrect sg-1 elevation
 dh1['dh//ds'] = dh1['dh//ds'] - shift
 
 
 
-
+#turn dh/ds back into dh time series and scale it for 1dtemp
 dh1['dh//ds'] = dh1['dh//ds'] * -.3
+
+#output a scaled PZCW - SG1 head time series
 dh1 = dh1.drop('deltah', 1)
 dh1.to_csv('C:\\SecondCreekGit\\SCRIPT OUTPUTS\\HEAD DIFFERENCES\\Scaled using PZStickup\\scaleddh1CW_shifted.csv',sep =',',date_format='%m/%d/%Y %H:%M', header = False)
 dh1temp = np.loadtxt('C:\\SecondCreekGit\\SCRIPT OUTPUTS\\HEAD DIFFERENCES\\Scaled using PZStickup\\scaleddh1CW_shifted.csv', dtype =str , delimiter = ',')
 np.savetxt('C:\\SecondCreekGit\\SCRIPT OUTPUTS\\HEAD DIFFERENCES\\Scaled using PZStickup\\scaleddh1CW_shifted.csv',dh1temp,fmt= '%s', delimiter = ', ')
 
 
-#add the PZCC head to dh/ds in order to get SG1 head ts
-dhShift = shift * dsCW
+#calculate the amout that other dh series should be shifted before they are sacled for 1dtemp
+dhShift = shift * dsCWw

@@ -50,8 +50,8 @@ dh2I = dh2I.set_index(['date'])
 
 
 
-#scale dh to .3 meters for 1dtemppro. Also make it negative to indicate higher head in the stream bed
-dh1I['deltah'] = (dh1I['deltah'] -0.0534)* .3/dsI
+#scale dh to .3 meters for 1dtemppro. dsI is negative, so multiplying by -1 is not necessary in this script
+dh1I['deltah'] = dh1I['deltah'] * .3/dsI
 dh2I['deltah'] = dh2I['deltah'] *.3/dsI 
 
 #Save head data as a csv suitable for 1dtempProbePro. This requires reloading the
@@ -59,13 +59,31 @@ dh2I['deltah'] = dh2I['deltah'] *.3/dsI
 #character delimiters.
 
 #Output  units are meters
-dh1I.to_csv('C:\\SecondCreekGit\\SCRIPT OUTPUTS\\HEAD DIFFERENCES\\Scaled using PZStickup\\scaleddh1I_shifted.csv',sep =',',date_format='%m/%d/%Y %H:%M', header = False)
+dh1I.to_csv('C:\\SecondCreekGit\\SCRIPT OUTPUTS\\HEAD DIFFERENCES\\Scaled using PZStickup\\scaleddh1I.csv',sep =',',date_format='%m/%d/%Y %H:%M', header = False)
 dh2I.to_csv('C:\\SecondCreekGit\\SCRIPT OUTPUTS\\HEAD DIFFERENCES\\Scaled using PZStickup\\scaleddh2I.csv',sep =',',date_format='%m/%d/%Y %H:%M', header = False)
-dh1temp = np.loadtxt('C:\\SecondCreekGit\\SCRIPT OUTPUTS\\HEAD DIFFERENCES\\Scaled using PZStickup\\scaleddh1I_shifted.csv', dtype =str , delimiter = ',')
+dh1temp = np.loadtxt('C:\\SecondCreekGit\\SCRIPT OUTPUTS\\HEAD DIFFERENCES\\Scaled using PZStickup\\scaleddh1I.csv', dtype =str , delimiter = ',')
 dh2temp = np.loadtxt('C:\\SecondCreekGit\\SCRIPT OUTPUTS\\HEAD DIFFERENCES\\Scaled using PZStickup\\scaleddh2I.csv', dtype =str, delimiter = ',')
-np.savetxt('C:\\SecondCreekGit\\SCRIPT OUTPUTS\\HEAD DIFFERENCES\\Scaled using PZStickup\\scaleddh1I_shifted.csv',dh1temp,fmt= '%s', delimiter = ', ')
+np.savetxt('C:\\SecondCreekGit\\SCRIPT OUTPUTS\\HEAD DIFFERENCES\\Scaled using PZStickup\\scaleddh1I.csv',dh1temp,fmt= '%s', delimiter = ', ')
 np.savetxt('C:\\SecondCreekGit\\SCRIPT OUTPUTS\\HEAD DIFFERENCES\\Scaled using PZStickup\\scaleddh2I.csv',dh2temp,fmt = '%s', delimiter = ', ')
 #
+
+
+
+
+
+
+
+
+
+
+
+
+
+#Garbage below
+
+
+
+
 
 
 #

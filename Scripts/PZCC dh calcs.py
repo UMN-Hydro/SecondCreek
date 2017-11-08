@@ -50,7 +50,7 @@ dh2CC = dh2CC.set_index(['date'])
 
 
 #scale dh to .3 meters for 1dtemppro. Also make it negative to indicate higher head in the stream bed
-dh1CC['deltah'] =( dh1CC['deltah'] -0.0534) * -.3/dsCC
+dh1CC['deltah'] = dh1CC['deltah']  * -.3/dsCC
 dh2CC['deltah'] = dh2CC['deltah'] *- .3/dsCC 
 
 #Save head data as a csv suitable for 1dtempProbePro. This requires reloading the
@@ -59,15 +59,21 @@ dh2CC['deltah'] = dh2CC['deltah'] *- .3/dsCC
 
 #Output  units are meters
 
-dh1CC.to_csv('C:\\SecondCreekGit\\SCRIPT OUTPUTS\\HEAD DIFFERENCES\\Scaled using PZStickup\\scaleddh1CC_shifted.csv',sep =',',date_format='%m/%d/%Y %H:%M', header = False)
+dh1CC.to_csv('C:\\SecondCreekGit\\SCRIPT OUTPUTS\\HEAD DIFFERENCES\\Scaled using PZStickup\\scaleddh1CC.csv',sep =',',date_format='%m/%d/%Y %H:%M', header = False)
 dh2CC.to_csv('C:\\SecondCreekGit\\SCRIPT OUTPUTS\\HEAD DIFFERENCES\\Scaled using PZStickup\\scaleddh2CC.csv',sep =',',date_format='%m/%d/%Y %H:%M', header = False)
-dh1temp = np.loadtxt('C:\\SecondCreekGit\\SCRIPT OUTPUTS\\HEAD DIFFERENCES\\Scaled using PZStickup\\scaleddh1CC_shifted.csv', dtype =str , delimiter = ',')
+dh1temp = np.loadtxt('C:\\SecondCreekGit\\SCRIPT OUTPUTS\\HEAD DIFFERENCES\\Scaled using PZStickup\\scaleddh1CC.csv', dtype =str , delimiter = ',')
 dh2temp = np.loadtxt('C:\\SecondCreekGit\\SCRIPT OUTPUTS\\HEAD DIFFERENCES\\Scaled using PZStickup\\scaleddh2CC.csv', dtype =str, delimiter = ',')
-np.savetxt('C:\\SecondCreekGit\\SCRIPT OUTPUTS\\HEAD DIFFERENCES\\Scaled using PZStickup\\scaleddh1CC_shifted.csv',dh1temp,fmt= '%s', delimiter = ', ')
+np.savetxt('C:\\SecondCreekGit\\SCRIPT OUTPUTS\\HEAD DIFFERENCES\\Scaled using PZStickup\\scaleddh1CC.csv',dh1temp,fmt= '%s', delimiter = ', ')
 np.savetxt('C:\\SecondCreekGit\\SCRIPT OUTPUTS\\HEAD DIFFERENCES\\Scaled using PZStickup\\scaleddh2CC.csv',dh2temp,fmt = '%s', delimiter = ', ')
 #
 
 
+
+
+
+
+#GARBAGE BELOW
+##########
 #
 #
 #K1 =  6.3021
