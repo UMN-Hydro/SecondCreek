@@ -54,3 +54,15 @@ TEMP PRO results
 - Encountering confusion about all units. headdiff files have units meters (SCDiver gives units of cm, then converted to M in HeadDiffcalc)
 -There were unit errors in the calculations for all dh time series, all K modeling must be repeated. 
 - rerunning all k esitamtions, getting k several orders of magnitude smaller. New results agree with independently modeled q
+
+11/7
+
+
+-to do: shift PZI and PZCC head series using same method as PZCW
+- document shift method clearly
+-reestimate k for tpb, tpc
+- make q time series plots
+- for meeting with Crystal tomorrow: 
+- signed honors form
+- sg1 back calc
+- q ts plot based on K and new dh/ds (from back calc q)
