@@ -66,3 +66,7 @@ TEMP PRO results
 - signed honors form
 - sg1 back calc
 - q ts plot based on K and new dh/ds (from back calc q)
+
+11/16/17
+- re-running K estimation with shifted data to be able to observe at quality of fit
+		-Archive 50: full summer TPA
