@@ -70,4 +70,14 @@ TEMP PRO results
 11/16/17
 - re-running K estimation with shifted data to be able to observe at quality of fit
 		-Archive 50: full summer TPA
+-made full summer q ts plots
+-took screenshots to compare fits visualy
 11/19/17
+- wrote script to get logger data into proper format for scdiver
+-need surveyed elevation and dtw for 2017 to calibrate loggers
+- working on formating temp data
+
+for meeting:
+-screenshots to show fit comparison
+- q ts plots
+

@@ -8,8 +8,9 @@ Created on Sun Nov 19 18:06:00 2017
 import pandas as pd
 import numpy as np
 PZ = pd.DataFrame(columns =('date1','date2','pressure','temp'))
+path = 'C:\\SecondCreekGit\\2017 Summer data dump\\Edited txt files\\MON_M9506\\2_171026104348_M9506'
 #PZ =pd.read_csv('C:\\SecondCreekGit\\2017 Summer data dump\\Edited txt files\\MON_H2366\\pzpe_171026110611_H2366.txt', delimiter = "      ", header = None , engine = 'python') 
-with open('C:\\SecondCreekGit\\2017 Summer data dump\\Edited txt files\\MON_H2366\\pzpe_171026110611_H2366.txt') as f:
+with open(path+'.txt') as f:
  
     for line in f:
 #        cols =pd.DataFrame ( np.transpose(line.split()), columns =('date1','date2','pressure','temp'))
@@ -24,4 +25,4 @@ PZ = PZ[['date', 'pressure', 'temp'] ]
 PZ['date']= pd.to_datetime(PZ['date'], format= '%Y/%m/%d %H:%M:%S')
 PZ = PZ.set_index(['date'])
 
-PZ.to_csv('C:\\SecondCreekGit\\2017 Summer data dump\\Edited txt files\\MON_H2366\\pzpe_171026110611_H2366.csv',sep =',',date_format='%m/%d/%Y %H:%M', header = False)
+PZ.to_csv(path+'.csv',sep =',',date_format='%m/%d/%Y %H:%M', header = False)
