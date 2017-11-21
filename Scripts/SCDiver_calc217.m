@@ -38,16 +38,18 @@ clear all, close all, fclose all;
 %date_label = '151016'
 % date_label = '160530';
 % date_label = '161005';
-date_label = '2017'
+date_label = '2017';
 % - Choose one transducer
 % DivLabel = 'PZCC';
-% DivLabel = 'PZCE';
+ DivLabel = 'PZCE';
 % DivLabel = 'PZCW';
 % DivLabel = 'PZEZ';
-% DivLabel = 'PZI2';
+% DivLabel = 'PZIZ';
 % DivLabel = 'PZPE';
 % DivLabel = 'PZPW';
-% DivLabel = 'SG';
+% DivLabel = 'SG-2';
+% DivLabel = 'SG-1';
+
 % =========================
 % 10/01/16
 % =========================
@@ -57,13 +59,13 @@ if strcmp(date_label, '2017')
 
 
 
-    elseif strcmp(DivLabel, 'PZCC') 
-       
-        PVC_Elev = 428.818 * 100; % m -> cm [total station transit 10/01/16]
+   if strcmp(DivLabel, 'PZCC') 
+        here = 'made it in'
+        PVC_Elev = 429.494 * 100; % m -> cm [total station transit 10/01/16]
         SCDiver_fil = 'C:\SecondCreekGit\2017 Summer data dump\Edited txt files\ready for SCDive\PZCC_171026105654_M3583.csv';
 %         ManualDate = '2015/06/25'; ManualTime = '16:30:00'; PVC_DepthToWater = 75; % cm
 %         ManualDate = '2015/07/10'; ManualTime = '09:30:00'; PVC_DepthToWater = 88.7; % cm
-        ManualDate = '2016/10/01'; ManualTime = '14:30:00'; PVC_DepthToWater = -3.9; % cm 
+        ManualDate = '2017/06/09'; ManualTime = '14:00:00'; PVC_DepthToWater = 97.2; % cm 
         Div_Int_Min = 10; % time interval in min
         DivStartDate = '2017/05/25'; DivStartTime = '14:50:00';  % nan: use top of file
         DivEndDate = '2017/10/21'; DivEndTime = '11:10:00';  % nan: use end of file
@@ -71,19 +73,19 @@ if strcmp(date_label, '2017')
     % *********************
 
     elseif strcmp(DivLabel, 'PZCE') 
-        PVC_Elev = 429.098 * 100; % m -> cm [total station transit 10/01/16]
+        PVC_Elev = 429.176 * 100; % m -> cm [total station transit 10/01/16]
         SCDiver_fil = 'C:\SecondCreekGit\2017 Summer data dump\Edited txt files\ready for SCDive\PZCE_171026103152_M9447.csv';
-        ManualDate = '2016/10/01'; ManualTime = '13:00:00'; PVC_DepthToWater = 22.7; % cm
+        ManualDate = '2017/06/09'; ManualTime = '13:00:00'; PVC_DepthToWater = 66.3; % cm
         Div_Int_Min = 10; % time interval in min
         DivStartDate = '2017/05/25'; DivStartTime = '15:00:00';  % nan: use top of file
         DivEndDate = '2017/10/21'; DivEndTime = '11:00:00';  % nan: use end of file
       %  DiverElev =  428.087250*100;
     
     elseif strcmp(DivLabel, 'PZCW')
-        PVC_Elev = 429.12 * 100; % m -> cm [total station transit 10/02/16]
+        PVC_Elev =429.464* 100; % m -> cm [total station transit 10/02/16]
         SCDiver_fil = 'C:\SecondCreekGit\2017 Summer data dump\Edited txt files\ready for SCDive\PZCW_171026104348_M9506.csv';
  %      ManualDate = '2016/05/31'; ManualTime = '09:15:00'; PVC_DepthToWater = 55.7; % cm (DO NOT TRUST BC FLOODED AND BUBBLES WHEN CAP REMOVED)  
-        ManualDate = '2016/10/01'; ManualTime = '15:45:00'; PVC_DepthToWater = 24.8; % cm (DO NOT TRUST BC FLOODED AND BUBBLES WHEN CAP REMOVED)  
+        ManualDate = '2017/06/09'; ManualTime = '14:00:00'; PVC_DepthToWater = 92.6; % cm (ED)  
         Div_Int_Min = 15; % time interval in min
         DivStartDate = '2017/05/25'; DivStartTime = '14:45:00';  % nan: use top of file
         DivEndDate = '2017/10/21'; DivEndTime = '11:00:00';  % nan: use end of file
@@ -91,45 +93,45 @@ if strcmp(date_label, '2017')
 
 
     elseif strcmp(DivLabel, 'PZEZ')
-        PVC_Elev = 429.336 * 100; % m -> cm [total station transit 10/02/16]
+        PVC_Elev = 429.424 * 100; % m -> cm [total station transit 10/02/16]
         SCDiver_fil = 'C:\SecondCreekGit\2017 Summer data dump\Edited txt files\ready for SCDive\PZEZ_171026102257_M9484.csv';
-        ManualDate = '2016/10/02'; ManualTime = '12:45:00'; PVC_DepthToWater = 30.6; % cm
+        ManualDate = '2017/06/09'; ManualTime = '14:00:00'; PVC_DepthToWater = 90.5; % cm
         Div_Int_Min = 15; % time interval in min
         DivStartDate = '2017/05/25'; DivStartTime = '17:30:00';  % nan: use top of file
         DivEndDate = '2017/10/21'; DivEndTime = '11:15:00';  % nan: use end of file
       %  DiverElev = 429.399170 *100;
   
-    elseif strcmp(DivLabel, 'PZI2')
-        PVC_Elev = 429.538 * 100; % m -> cm [total station transit 10/02/16]
+    elseif strcmp(DivLabel, 'PZIZ')
+        PVC_Elev = 429.624* 100; % m -> cm [total station transit 10/02/16]
         SCDiver_fil = 'C:\SecondCreekGit\2017 Summer data dump\Edited txt files\ready for SCDive\PZI2_171026103639_M9438.csv';
-        ManualDate = '2016/10/01'; ManualTime = '14:00:00'; PVC_DepthToWater = 65; % cm
+        ManualDate = '2017/06/09'; ManualTime = '14:30:00'; PVC_DepthToWater = 114.4; % cm
         Div_Int_Min = 15; % time interval in min
         DivStartDate = '2017/05/25'; DivStartTime = '17:45:00';  % nan: use top of file
         DivEndDate = '2017/10/21'; DivEndTime = '10:30:00';  % nan: use end of file
      %   DiverElev = 428.509250 *100;
   
     elseif strcmp(DivLabel, 'PZPE')
-        PVC_Elev = 429.212 * 100; % m -> cm [total station transit 10/01/16 and 10/02/16]
+        PVC_Elev = 429.528; % m -> cm [total station transit 10/01/16 and 10/02/16]
         SCDiver_fil = 'C:\SecondCreekGit\2017 Summer data dump\Edited txt files\ready for SCDive\pzpe_171026110611_H2366.csv';
-        ManualDate = '2016/10/01'; ManualTime = '14:00:00'; PVC_DepthToWater = 33.6; % cm
+        ManualDate = '2017/06/09'; ManualTime = '13:45:00'; PVC_DepthToWater = 89.9; % cm
         Div_Int_Min = 15; % time interval in min
         DivStartDate = '2017/06/09'; DivStartTime = '12:30:00';  % nan: use top of file
         DivEndDate = '2017/10/21'; DivEndTime = '12:150:00';  % nan: use end of file
       %  DiverElev = 427.338500*100;
  
     elseif strcmp(DivLabel, 'PZPW')
-        PVC_Elev = 429.558 * 100; % m -> cm [total station transit averaged 10/01/16 and 10/02/16]
+        PVC_Elev = 429.828 * 100; % m -> cm [total station transit averaged 10/01/16 and 10/02/16]
         SCDiver_fil = 'C:\SecondCreekGit\2017 Summer data dump\Edited txt files\ready for SCDive\pzpw_171026105158_M9440.csv';
-        ManualDate = '2016/10/01'; ManualTime = '13:00:00'; PVC_DepthToWater = 68.1; % cm
+        ManualDate = '2017/06/09'; ManualTime = '14:30:00'; PVC_DepthToWater = 125; % cm
         Div_Int_Min = 15; % time interval in min
         DivStartDate = '2017/06/09'; DivStartTime = '12:15:00';  % nan: use top of file
         DivEndDate = '2017/10/21'; DivEndTime = '11:45:00';  % nan: use end of file
       %   DiverElev = 427.631000*100;
   
-    elseif strcmp(DivLabel, 'SG')
-        PVC_Elev = 429.342 * 100; % m -> cm [total station transit averaged 10/01/16 and 10/02/16]
+    elseif strcmp(DivLabel, 'SG-2')
+        PVC_Elev = 429.484 * 100; % m -> cm [total station transit averaged 10/01/16 and 10/02/16]
         SCDiver_fil = 'C:\SecondCreekGit\2017 Summer data dump\Edited txt files\ready for SCDive\SG_171026111310_M9505.csv';
-        ManualDate = '2016/10/01'; ManualTime = '13:00:00'; PVC_DepthToWater = 68.1; % cm
+        ManualDate = '2017/06/09'; ManualTime = '15:00:00'; PVC_DepthToWater = 100.2; % cm
         Div_Int_Min = 10; % time interval in min
         DivStartDate = '2017/05/25'; DivStartTime = '15:40:00';  % nan: use top of file
         DivEndDate = '2017/10/211'; DivEndTime = '12:00:00';  % nan: use end of file
@@ -163,7 +165,7 @@ fclose(fid);
 fid = fopen(SCBaro_fil, 'r');
 DBar = textscan(fid, '%s%s%f%f', 'Delimiter', {' ', ','});
 fclose(fid);
-
+stuck = 0
 % get matching dates
 if isnan(DivStartDate)
     Div_ind1 = 1;
@@ -175,6 +177,9 @@ while(1)
     if isempty(Bar_ind1)
         Bar_ind1 = 1;
         Div_ind1 = find(strcmp(DBar{1}(Bar_ind1), DDiv{1}) & strcmp(DBar{2}(Bar_ind1), DDiv{2}),1);
+       
+        stuck= stuck + 1
+       
     end
     if isempty(Div_ind1)
         Div_ind1 = Div_ind1 + 1; % try another time

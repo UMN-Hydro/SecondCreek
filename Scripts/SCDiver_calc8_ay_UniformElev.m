@@ -43,9 +43,9 @@ clear all, close all, fclose all;
 %  date_label = '161005';
 
 % - Choose one transducer
-% DivLabel = 'SG-1';
+ DivLabel = 'test';
 % DivLabel = 'PZ-In';
- DivLabel = 'PZ-Out';
+% DivLabel = 'PZ-Out';
 % DivLabel = 'PZ-Bank';
 % DivLabel = 'PZ-CW'; %added summer 2016
 % DivLabel = 'PZ-CC'; %added summer 2016
@@ -65,8 +65,9 @@ if strcmp(date_label, '150625')
     % date_label = '150625';
 
     DivEndDate = nan; DivEndTime = nan;  % nan: use end of file
-    if strcmp(DivLabel, 'SG-1')
-        SCDiver_fil = 'C:\Users\Amanda\Desktop\Research\Diver\2015_06_25\SG1_150625download_data_edit.csv';
+    if strcmp(DivLabel, 'test')
+
+        SCDiver_fil = 'C:\SecondCreekGit\2017 Summer data dump\Edited txt files\ready for SCDive\PZCC_171026105654_M3583.csv';
         ManualDate = '2015/06/25'; ManualTime = '16:30:00';
         PVC_Elev = 429.486 * 100; % m -> cm [UPDATED elevations w 10/17 level transit survey]
         PVC_DepthToWater = 75; % cm
@@ -103,9 +104,6 @@ if strcmp(date_label, '150625')
         DivStartDate = '2015/06/09'; DivStartTime = '15:00:00';
         DiverElev = 428.333000 * 100; % from 10/16/2015 collection date where Diver Elev: 428.333000 m (1405.29 ft)
         
-    else
-        fprintf('No data file for %s and %s; exiting... \n', date_label, DivLabel);
-        return
     end
     
 %     *********************
@@ -601,7 +599,7 @@ if strcmp(date_label, '160530')
     SCBaro_fil = 'C:\Users\Amanda\Desktop\Research\Diver\2016_05_30\CSV_edit\A2Baro_160530download_data.csv';
     Baro_Int_Min = 15; % time interval in min
         
-end
+
 
 
 % =========================
@@ -740,7 +738,7 @@ if strcmp(date_label, '161005')
 
     % *********************
 
-    SCBaro_fil = 'C:\Users\Amanda\Desktop\Research\Diver\2016_10_02\CSVedit\a2_baro_161005161148_M9484_edit.CSV';
+    SCBaro_fil = 'C:\SecondCreekGit\2017 Summer data dump\atmospheric_pressure.csv';
     Baro_Int_Min = 15; % time interval in min
         
 end
@@ -766,6 +764,7 @@ while(1)
     if isempty(Bar_ind1)
         Bar_ind1 = 1;
         Div_ind1 = find(strcmp(DBar{1}(Bar_ind1), DDiv{1}) & strcmp(DBar{2}(Bar_ind1), DDiv{2}),1);
+        stuck = 'we are stuuuuck'
     end
     if isempty(Div_ind1)
         Div_ind1 = Div_ind1 + 1; % try another time
