@@ -101,3 +101,9 @@ QUESTIONS
 -looks like the xtra big tp files were trippled up on data, thatsaid... they are still realllllly huge
 -github no like big data files (still) so i put them in my documents for safe keeping
 -need to get scdiver working tonight IHOPE
+
+-what are the units for the atmospheric pressure logger?
+-why are there odd characters in the logger files? - tp4 1506915000
+-why does the pressure logger go back to 2015?
+-units for presssure - cm H20 or mmHg or ?
+- wtf is up with the huge temp probe files??????
