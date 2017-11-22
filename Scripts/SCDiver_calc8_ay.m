@@ -636,7 +636,7 @@ if strcmp(date_label, '161005')
 
     elseif strcmp(DivLabel, 'PZ-In') 
         PVC_Elev = 429.098 * 100; % m -> cm [total station transit 10/01/16]
-        SCDiver_fil = 'C:\SecondCreekGit\DATA\2016_head_data\2016_10_02\CSV_edit\pzi_6_161005160841_M9505.CSV';
+           SCDiver_fil = 'C:\SecondCreekGit\2017 Summer data dump\Edited txt files\MON_M3583\1_171026105654_M3583.csv'
        ManualDate = '2016/10/01'; ManualTime = '13:00:00'; PVC_DepthToWater = 22.7; % cm
 %         ManualDate = '2016/05/31'; ManualTime = '09:00:00'; PVC_DepthToWater = 56.37; % cm
 
@@ -755,6 +755,9 @@ if strcmp(date_label, '161005')
     % *********************
 
     SCBaro_fil = 'C:\SecondCreekGit\DATA\2016_head_data\2016_10_02\CSV_edit\a2_baro_161005161148_M9484.csv';
+    
+    
+
     Baro_Int_Min = 15; % time interval in min
         
 end

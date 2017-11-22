@@ -107,3 +107,7 @@ QUESTIONS
 -why does the pressure logger go back to 2015?
 -units for presssure - cm H20 or mmHg or ?
 - wtf is up with the huge temp probe files??????
+- calibration for temp probes that werent re used?
+- how does the calibration script work?
+
+- have deduced that the scdiver error is caused by the pz input file
