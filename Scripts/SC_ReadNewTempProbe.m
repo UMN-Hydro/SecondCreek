@@ -45,10 +45,10 @@ ntherm = 6 ; %number thermisters/probe
 %     SCTempProbeC_fil = 'C:\SecondCreekGit\TempProbeAnalysis\TempProbeRawData_2016\2016_08_01_download\Logger_C_20160801.txt' ;
 %     SCCal_fil = 'C:\SecondCreekGit\TempProbeAnalysis\TempProbe\TempProbCalAvg_2016.dat' ;
 %     
-       SCTempProbeA_fil = 'C:\SecondCreekGit\DATA\TempProbeRawData_2016\2016_10_04_download\Logger_A_20160410.txt' ;
-    SCTempProbeB_fil = 'C:\SecondCreekGit\DATA\TempProbeRawData_2016\2016_10_04_download\Logger_B.txt' ;
-    SCTempProbeC_fil = 'C:\SecondCreekGit\DATA\TempProbeRawData_2016\2016_08_01_download\Logger_C_20160801.txt' ;
-    SCCal_fil = 'C:\SecondCreekGit\DATA\TempProbeRawData_2016\CalibrationFiles\TempProbCalAvg_2016.dat' ;
+       SCTempProbeA_fil = 'C:\Users\Jack\Documents\TPA (1).txt' ;
+    SCTempProbeB_fil = 'C:\Users\Jack\Documents\TPB (1).txt' ;
+    SCTempProbeC_fil = 'C:\Users\Jack\Documents\TPC.txt';
+    SCCal_fil = 'C:\SecondCreekGit\DATA\Temp_data\drive-download-20171122T162810Z-001\TempProbCalAvg_2016 .dat' ;
     
     %read csv file
     TP_A = csvread(SCTempProbeA_fil);
@@ -81,14 +81,14 @@ ntherm = 6 ; %number thermisters/probe
 
 
 % 3. ****** SET DATE BEGINNING DATETIME (datetime that probes were inserted
-    time_ix_A = find((RegularPersonTimeA(:,1)== '30-May-2016 16:00:00'));
-    time_ix_B = find((RegularPersonTimeB(:,1)== '30-May-2016 16:00:00'));
-    time_ix_C = find((RegularPersonTimeC(:,1)== '30-May-2016 16:00:00'));
+    time_ix_A = find((RegularPersonTimeA(:,1)== '25-May-2017 16:00:00'));
+    time_ix_B = find((RegularPersonTimeB(:,1)== '26-May-2017 16:00:00'));
+    time_ix_C = find((RegularPersonTimeC(:,1)== '25-May-2017 14:26:02'));
     % ****** SET DATE END DATETIME (datetime that probes data was
     % downloaded)
-    time_ixend_A = find((RegularPersonTimeA(:,1)== '02-Oct-2016 12:00:00'));
-    time_ixend_B = find((RegularPersonTimeB(:,1)== '01-Aug-2016 12:00:00'));
-    time_ixend_C = find((RegularPersonTimeC(:,1)== '01-Aug-2016 12:00:00'));
+    time_ixend_A = find((RegularPersonTimeA(:,1)== '26-Jul-2017 17:27:48'));
+    time_ixend_B = find((RegularPersonTimeB(:,1)== '29-Sep-2017 12:00:00'));
+    time_ixend_C = find((RegularPersonTimeC(:,1)== '30-Sep-2017 06:50:00'));
     
     Time_trim_A=RegularPersonTimeA(time_ix_A:time_ixend_A);
     Time_trim_B=RegularPersonTimeB(time_ix_B:time_ixend_B);

@@ -111,3 +111,18 @@ QUESTIONS
 - how does the calibration script work?
 
 - have deduced that the scdiver error is caused by the pz input file
+-JK SCDIVER IS FUCKED BECAUSE THE ATMOSPHERIC PRESSURE PZ WENT TO CRAP VILLE AND HAS NO DATA PAST 4/14
+	-side note wtf is up with the temperature measurments
+	--side note why/how did it record 2015 and 2016 data?>>? - why is it in 30 minute time intervals - did the starting time and interval time get screwed up during deployment?!?!?!?!?!?!?!? - please let this be the case. --it has double the entries of the 2016 baro
+
+11/22
+complete list of data issues
+-TP1: lots of negative numbers, -273.15 especially. recorded -  jun 14 thruNov 20 2017
+-TP2 - looks like only the 4th TP is funked
+TP3 - looks good
+TP4 - weird characters at several place, especially 1501364700
+TPA and B- trippled up data. may - july
+TPC- trippled up data, but it isnt insanley big. may - sep
+-need calibration data for 2017 new temp probes
+
+-looks like the old Temp calibration file willwork for at least TPA,b,c
