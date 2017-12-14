@@ -1,3 +1,5 @@
+#a much more sophisticated script for plotting q and rain data together
+
 # -*- coding: utf-8 -*-
 """
 Created on Sun May 07 22:56:42 2017

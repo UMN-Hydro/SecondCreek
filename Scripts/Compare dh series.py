@@ -1,3 +1,4 @@
+#Plot dh time series so that they can be visually compared
 # -*- coding: utf-8 -*-
 """
 Created on Wed Nov 01 10:44:46 2017

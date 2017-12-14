@@ -1,3 +1,5 @@
+#Script used to scale dh/dsd and get it into format for 1d temppro
+
 # -*- coding: utf-8 -*-
 """
 Created on Tue Oct 31 12:14:57 2017

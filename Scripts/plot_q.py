@@ -1,3 +1,4 @@
+#sloppy, quick and dirty script for plotting tsummer qts
 # -*- coding: utf-8 -*-
 """
 Created on Tue Nov 07 21:24:42 2017
