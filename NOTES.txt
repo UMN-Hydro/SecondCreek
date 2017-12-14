@@ -126,3 +126,24 @@ TPC- trippled up data, but it isnt insanley big. may - sep
 -need calibration data for 2017 new temp probes
 
 -looks like the old Temp calibration file willwork for at least TPA,b,c
+
+11/24
+- working on sensitivity analysis
+		-thermal conductivity range(FULL saturation):0.8 - 1.8 from "thermophysical properties of heat soils"
+		- Sediment heat capacity: 
+
+		-most soil minerals 
+			- thermal ocnductivity : 2.9 W/m k
+			- heat capacity :1.92e6	J/(m^3 k)
+		- soil organic material
+			-0.25 W/mk
+			- heat capacity 2.6 e6 J/(m^3 k)
+		-water
+			-0.6 W/ m k
+			-4.2e6 J/(m^3 k)
+-values in our modeling were calculated using frxn observed, and were in agreement with GEOtechnics of high water content material
+
+12/14
+-since last time: I did some sensitivity analysis
+-hey its been a while!
+-Working on organizing github, andfinding physical meaning of parameters used for sensitivity analysis.

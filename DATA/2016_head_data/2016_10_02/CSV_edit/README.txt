@@ -1,1 +1,0 @@
-SG1_shifted best matches SG2. The shift was calculated so that K for the first half of the summer would match K for the second half.

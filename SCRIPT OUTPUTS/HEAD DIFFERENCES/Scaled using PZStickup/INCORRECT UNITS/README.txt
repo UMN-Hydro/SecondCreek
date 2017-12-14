@@ -1,2 +1,0 @@
-DO NOT USE THE HEAD DIFFERENCE FILES IN THIS DIRECTORY
-non of their units are consistent
