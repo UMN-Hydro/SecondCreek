@@ -147,3 +147,43 @@ TPC- trippled up data, but it isnt insanley big. may - sep
 -since last time: I did some sensitivity analysis
 -hey its been a while!
 -Working on organizing github, andfinding physical meaning of parameters used for sensitivity analysis.
+
+12/15
+-realized that model volumetric heat capacity should be for the matrix, not matrix-water combination so 3.1*10^6 J/(m^3 C) is
+physically unrealistic. (avg soil Cp = 2 *10^6, soil ogranic matter Cp = 2.5 * 10^6) 3.1 was calculated
+including the volumetric heat capacity of water (4.2 *10^6)
+-noticed that model runs from sensitiviy analysis with smaller Cp had slightly better RMS error
+-planning to rerun 1Dtemp with new Cp = 2.25*10^6
+
+12/16
+-based on "Thermal Properties of soils"(Omar T Farouki 1981) new thermal properties are being tried:
+
+Cp = 2.44*10^6
+Lambda max: .561
+Lambda min .4
+
+determined that sed is 90% SOM, 10%normal soil based on dry bulk density
+
+
+1/18/18
+-its a n e w y e a r ! 
+-today im trying to figure out if the calibration files rachel found are the ones needed to make sense of hte 2017 data
+
+1/19/18
+-not leaving till i know if those r the right calibration files
+-responding to ellas email
+.they were the right cal filews!
+
+1/20/18
+-help ella with dh/dz calculations
+
+2/6/18
+-since we last spoke, I applied for the MGWA scholarship
+- Ella showed that there is a flux reversal that lasts all fall at SC  in 2017
+-now it's time to work on convincing crystal that my results are good (sensitivity analysis)
+
+2/8/18
+-Collected some sensitivity data, now time to make sense of it hehehehehe
+-"In field experiements dispersion goes 0.1-2 m http://www2.nau.edu/~doetqp-p/courses/env303a/lec36/lec36.htm
+ -peclet number: diffusion dominates
+
