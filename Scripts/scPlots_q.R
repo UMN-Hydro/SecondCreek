@@ -84,7 +84,7 @@ weather_embarrass$TMAX=NULL
 #mergePrecip = merge(weather_embarrass, mergedTP , id = 'Date', all = TRUE)
 #meltPrecip = melt(mergedTP, id= 'Date')
 
-ggplot(data = weather_embarrass, aes(x= Date, y=PRCP))+geom_line() + labs(title = 'Precipitation at Embarass, MN weather station') + ylab('Precip, in.') 
+ggplot(data = weather_embarrass, aes(x= Date, y=PRCP))+geom_line() + labs(title = 'Precipitation at Embarass, MN weather station') + ylab('Precip, in.') +theme_gray()
 
 
  
