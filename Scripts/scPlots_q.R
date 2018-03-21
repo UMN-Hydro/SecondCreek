@@ -64,9 +64,9 @@ mergedTP = merge(mergedTP, TPB,  all = FALSE)
 meltMerge = melt(mergedTP, id= 'Date', na.rm = FALSE)
 
 
-ggplot(data = meltMerge, aes (x= Date, y= value, colour = variable, group = variable, na.rm = TRUE))+labs(title = "2016 hyporheic flux at Second Creek, daily average") + ylab("q, m/d. Positive is upwards flux") + geom_line() +scale_colour_discrete(name="Location")
+ggplot(data = meltMerge, aes (x= Date, y= value, colour = variable, group = variable, na.rm = TRUE))+labs(title = "2016 hyporheic flux at Second Cr") + ylab("q, m/d. Positive is upwards flux") + geom_line() +scale_colour_discrete(name="Location")
 
-
+ggplot(data = test, aes(x= Date, y = value, color = variable)) + geom_line(aes(y= stream_center, col = "stream_center"))+geom_line(aes(y= stream_west, col = "stream_west"))+geom_line(aes(y= west_wetland, col = "west_wetland"))
 
 #rain 
 
