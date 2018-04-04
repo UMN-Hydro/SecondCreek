@@ -12,12 +12,12 @@ x_max = as.POSIXct("2016-10-01 01:30:00", format = "%Y-%m-%d %H:%M:%S")
 
 
 plot1 <-ggplot(data = test, aes(x= Date, y = value, color = variable, na.rm = FALSE)) +xlab('')+ geom_line(aes(y= stream_center, col = "stream_center"), size = 2)+geom_line(aes(y= stream_west, col = "stream_west"), size = 2)+geom_line(aes(y= west_wetland, col = "west_wetland"), size =2 )+theme_gray()+ theme(legend.position="none")
-plot2 <-ggplot(data = test, aes(x= Date, y=value, na.rm = FALSE))+geom_line(aes(y=PRCP, col ="PRCP"), size = 2, color='black') + ylab('Precip, in.') +theme_gray()+xlab('')
+plot2 <-ggplot(data = test, aes(x= Date, y=value, na.rm = FALSE))+geom_line(aes(y=PRCP, col ="PRCP"), size = 2, color='black') + ylab('Daily precip, in') +theme_gray()+xlab('')
 
 plot1 <- plot1 + scale_x_datetime(limits=c(x_min, x_max))
 plot2 <- plot2 + scale_x_datetime(limits=c(x_min, x_max))
 
-plot1 = plot1 +ylab("Hyporheic flux, m/d.") 
+plot1 = plot1 +ylab("Hyporheic flux, m/d") 
 
 
 
