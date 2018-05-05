@@ -1,0 +1,13 @@
+,thermal.conductivity,variable,value,error
+1,0.4,west_wetland,0.027026,0.013328
+2,0.48,west_wetland,0.07692,0.10513
+3,0.561,west_wetland,0.075296,0.104
+4,0.64,west_wetland,0.101,0.1283
+5,0.4,stream_west,0.0063835,0.24803
+6,0.48,stream_west,0.013715,0.17946
+7,0.561,stream_west,0.027788,0.12751
+8,0.64,stream_west,0.033272,0.0955568
+9,0.4,stream_center,0.076159,0.30978
+10,0.48,stream_center,0.10006,0.23742
+11,0.561,stream_center,0.12707,0.17784
+12,0.64,stream_center,0.15364,0.13054

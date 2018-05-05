@@ -1,0 +1,10 @@
+,dispersivity,variable,value,error
+1,1,west_wetland,0,0.1
+2,0.1,west_wetland,0.07024,0.11279
+3,0.01,west_wetland,0.075296,0.104
+4,1,stream_west,0.030971,0.087764
+5,0.1,stream_west,0.042949,0.12055
+6,0.01,stream_west,0.027788,0.12751
+7,1,stream_center,0.068234,0.15524
+8,0.1,stream_center,0.17529,0.13477
+9,0.01,stream_center,0.12707,0.17784
