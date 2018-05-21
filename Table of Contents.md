@@ -27,7 +27,8 @@
   
   
   
-**WEATHER**<br />
+&nbsp;&nbsp;**WEATHER**<br />
+&nbsp;&nbsp;&nbsp;&nbsp; -precipitation data retrieved from cli-MATE database
 **Presentations and figures**<br />
 **SCRIPT OUTPUTS**<br />
 **Scripts**<br />
