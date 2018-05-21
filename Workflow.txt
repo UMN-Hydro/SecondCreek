@@ -1,0 +1,46 @@
+Workflow for 1DTempPro
+
+1. Process PZ and SG data
+	-Raw piezometer data must be processed using the SC_Diver script to establish a consistent datum for all of the piezometers and subtract 
+	 barometric pressure from the PZ measurments. The result of this step is a head time series for each PZ and the stream gauge. 
+
+2. calculate head differences 
+	-Calculate the difference in head between each PZ and the stream gauge and save this as a time series 
+	
+3. Correct the head difference time series (ONLY 2016)
+	-The true eleveation of the stream gauge was not measured before the stream gauge was moved halfway through the summer 
+	-This was corrected by the method described in SecondCreekGit\SCRIPT OUTPUTS\Head ts for 1dtemppro\Scaled using PZStickup\SCALED dh seris calculations.txt
+	-SecondCreekGit\Scripts\Preparing head time series for 1dtemppro\BackCalc_ds_from_q.py was used to accomplish this 
+
+4. Calculate dh/ds, then scale it for 1DTempPro
+	-Divide each head difference time series by the distanct from the top of that PZ's screen to the water-sediment interface (results in dh/ds)
+	-Multiply dh/ds by the distance between the deepst temperature probe and the shallowest probe (results in the delta-h time series that 1DTempPro takes as an input)
+	-the "___ dh calc.py" scripts located in C:\SecondCreekGit\Scripts\Preparing head time series for 1dtemppro were used for this
+	-delta-h data must be put in the format described in https://water.usgs.gov/ogw/bgas/1dtemppro/TUTORIAL.txt be careful of extra spaces
+	-1DTempPro takes positive delta-h to indicate higher head at the top of the model (downwards gradient)
+
+5. Prepare temperature data
+	-Raw temperature probe data must be processed using C:\SecondCreekGit\Scripts\Temp probe calibration\SC_ReadNewTempProbe.m
+	-Temperature data must be put in the format described in https://water.usgs.gov/ogw/bgas/1dtemppro/TUTORIAL.txt 
+	-be careful of extra spaces, and it must go from shallowest to deepest. 
+
+6. operate 1DTempPro
+	-Select data file (choose the processeed and properly formatted temperature probe data file i.e. C:\SecondCreekGit\DATA\TEMP\2016\PROCESSED\TPA.csv)
+	-Options -> Parameter estimation options -> select the radio button for teh parameter of interest
+	
+	1. Estimate K mode	
+		Reuired inputs: all thermal parameters, porosity, delta-h time series, temperature probe data
+		Output: hydraulic conductivity
+		-Choose the time-varying delta-h radio button, select the appropriate delta-h time series (SecondCreekGit\SCRIPT OUTPUTS\Head ts for 1dtemppro\Scaled using PZStickup\Shifted for dh continuity\PZCW full_summer_shift.csv)
+		-Options -> Parameter estimation options -> select the radio button for Hydraulic conductivity parameter of interest ->save and close
+		-Type in appropriate thermal parrameters 
+		-Click 'estimate K' at the bottom
+
+	2. Estimate q mode
+		Required inputs: all thermal parameters, porosity, temp probe data
+		Output: time--average q
+		-select radio button for constant q
+		-Options -> Parameter estimation options -> select the radio button for Specific Discharge -> save and close
+		-Type in appropriate thermal parameters
+		- click 'Estimate q'
+		(positive q is downwardsflux)
