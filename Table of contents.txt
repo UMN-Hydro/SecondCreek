@@ -1,3 +1,26 @@
+Updated 5/21/2018
+Jack Lange
+##############################################
+Table of contents is organized as follows:
+folder1
+	subfolder1
+	-description of contents
+	subfolder2
+	-description of contents
+folder2
+-description of contents
+
+folder 3
+	subfolder1
+		subsubfolder
+		-description of contents
+	-description of contents
+	subfolder2
+	-description of contents
+
+###########################################
+
+
 DATA 
 	HEAD 
         	2015 
