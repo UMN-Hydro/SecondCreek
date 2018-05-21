@@ -1,6 +1,4 @@
-#script to correct dh TS based on the calculated SG1 elevation in the begining of summer 2016. 
 
-# -*- coding: utf-8 -*-
 """
 Created on Mon Nov 06 13:24:29 2017
 

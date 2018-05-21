@@ -1,10 +1,13 @@
+#Jack Lange
+#Spring 2018
+#Uses the data file conjoined_q_gapsFilled.Rda to create the plot of hydrologic flux and rainfall with a shared y axis
 library(ggplot2)
 library(grid)
 library(dplyr)
 require(tidyverse)
 
 
- load(file = "C:\\SecondCreekGit\\Presentations and figures\\GSA NC poster\\conjoined_q_gapsFilled.Rda")
+ load(file = "C:\\SecondCreekGit\\Presentations and figures\\North Central GSA poster\\conjoined_q_gapsFilled.Rda")
 
 
 x_min =  as.POSIXct("2016-06-04 00:00:00", format = "%Y-%m-%d %H:%M:%S")

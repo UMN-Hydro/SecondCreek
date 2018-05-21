@@ -1,3 +1,6 @@
+#Jack Lange
+#spring 2018
+#creates plots of q over time and precip over time, more usefule is the 'conjoined precip and q plot.R' script
 library(dplyr)
 library(ggplot2)
 library(reshape2)

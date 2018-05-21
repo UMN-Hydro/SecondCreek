@@ -190,3 +190,6 @@ determined that sed is 90% SOM, 10%normal soil based on dry bulk density
 4/11/18
 -oops, it's been a while. I finished my presetion for NC GSA last week.
 - Working on tidying up the repo and organizing the location of all files 
+
+5/21/18
+-working on finishing touches on thesis and organizing this repo

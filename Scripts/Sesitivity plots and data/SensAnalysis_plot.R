@@ -1,3 +1,9 @@
+#Jack Lange
+#spring 2018
+# This script is used to create the sensitivity analysis plots that were used in my GSA poster and senior thesis. 
+
+
+
 library(dplyr)
 library(ggplot2)
 library(reshape2)
@@ -15,7 +21,7 @@ require(TSAUMN)
 require(lubridate)
 require(tidyselect)
 
-Dispersivity <- read.csv(file = "C:\\SecondCreekGit\\Presentations and figures\\GSA NC poster\\Data\\Dispersivity.csv")
+Dispersivity <- read.csv(file = "C:\\SecondCreekGit\\Presentations and figures\\North Central GSA poster\\Data\\Dispersivity.csv")
 Dispersivity$X = NULL
 Disp_plot =ggplot(data = Dispersivity, aes (x= dispersivity, y= value, colour = variable, group = variable, size = error))+geom_point()+ ylab("Hydraulic conductivity, m/d") + geom_line(size =1) +scale_colour_discrete(name="Location") + xlab("Dispersivity, m")
 Disp_plot = Disp_plot +theme(axis.text=element_text(size=20),  axis.title=element_text(size=45))
@@ -27,7 +33,7 @@ ggsave('C:\\SecondCreekGit\\Presentations and figures\\GSA NC poster\\Disp_plot.
 
 
 
-ThermalConductivity <- read.csv( file = "C:\\SecondCreekGit\\Presentations and figures\\GSA NC poster\\Data\\ThermalConductivity.csv")
+ThermalConductivity <- read.csv( file = "C:\\SecondCreekGit\\Presentations and figures\\North Central GSA poster\\Data\\ThermalConductivity.csv")
 ThermalConductivity$X = NULL
 
 TC_plot = ggplot(data = ThermalConductivity, aes (x= thermal.conductivity, y= value, size = error,colour = variable, group = variable))+geom_point()+ geom_line(size = 2) +scale_colour_discrete(name="Location") +ylab('')+ xlab("Sediment thermal conductivity, W/m*C")
@@ -40,8 +46,7 @@ ggsave('C:\\SecondCreekGit\\Presentations and figures\\GSA NC poster\\TC_plot.pn
 
 
 
-
-HeatCapacity <- read.csv(file = "C:\\SecondCreekGit\\Presentations and figures\\GSA NC poster\\Data\\HeatCapacity.csv")
+HeatCapacity <- read.csv(file = "C:\\SecondCreekGit\\Presentations and figures\\North Central GSA poster\\Data\\HeatCapacity.csv")
 HeatCapacity$X=NULL 
 HC_plot = ggplot(data = HeatCapacity, aes (x= Saturated.heat.capacity, y= value, colour = variable, group = variable, size = error))+geom_point()+ xlab("Saturated medium heat capacity, J/(m^3 *C)") +geom_line(size = 2)+ylab('')
 
