@@ -1,12 +1,15 @@
 Workflow for 1DTempPro
+Jack Lange
+5/22/18
 
 1. Process PZ and SG data
 	-Raw piezometer data must be processed using the SC_Diver script to establish a consistent datum for all of the piezometers and subtract 
 	 barometric pressure from the PZ measurments. The result of this step is a head time series for each PZ and the stream gauge. 
 
 2. calculate head differences 
-	-Calculate the difference in head between each PZ and the stream gauge and save this as a time series 
-	
+	-Calculate the difference in head between each PZ and the stream gauge and save this as a time series, I don't have a script for this
+	-caution:make sure the time intervals and the start+end date of both time series are the same 
+
 3. Correct the head difference time series (ONLY 2016)
 	-The true eleveation of the stream gauge was not measured before the stream gauge was moved halfway through the summer 
 	-This was corrected by the method described in SecondCreekGit\SCRIPT OUTPUTS\Head ts for 1dtemppro\Scaled using PZStickup\SCALED dh seris calculations.txt
