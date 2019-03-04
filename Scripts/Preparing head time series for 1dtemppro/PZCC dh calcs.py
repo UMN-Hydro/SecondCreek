@@ -1,5 +1,4 @@
-#Script used to scale dh/dsd and get it into format for 1d temppro
-
+#Script used to scale dh/ds and get it into format for 1d temppro
 
 
 
